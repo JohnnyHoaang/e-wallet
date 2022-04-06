@@ -32,17 +32,22 @@ public class LandingPageController {
     private void switchToAddNote() throws IOException {
         App.setRoot("AddNote");
     }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
+    @FXML
+    private void switchToSaveWallet() throws IOException {
+        App.setRoot("SaveWallet");
+    }
+    @FXML
+    private void switchToLoadWallet() throws IOException {
+        App.setRoot("LoadWallet");
+    }
+    @FXML
+    private void switchToOpenWallet() throws IOException {
+        App.setRoot("OpenWallet");
+    }
+    @FXML
+    private void switchToAddCash() throws IOException {
+        App.setRoot("AddCash");
+    }
  
 }
+
