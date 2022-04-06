@@ -7,6 +7,9 @@ public class Database{
     private static Database self = new Database();
     public static Database get(){return self;}
 
+    public ArrayList<Wallet> getDB(){
+        return this.db;
+    }
     public void save(Wallet wallet){
         for (Wallet w: db){
             if (w.getID() == wallet.getID()){

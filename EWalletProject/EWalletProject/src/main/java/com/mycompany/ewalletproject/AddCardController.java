@@ -1,6 +1,9 @@
 package com.mycompany.ewalletproject;
 
 import java.io.IOException;
+
+import com.mycompany.ewalletproject.App;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 

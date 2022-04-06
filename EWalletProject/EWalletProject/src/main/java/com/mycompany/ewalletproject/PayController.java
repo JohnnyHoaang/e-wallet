@@ -1,6 +1,5 @@
 package com.mycompany.ewalletproject;
 
-import com.mycompany.ewalletproject.App;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

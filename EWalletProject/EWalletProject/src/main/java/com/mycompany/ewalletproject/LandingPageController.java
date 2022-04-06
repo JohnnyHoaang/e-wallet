@@ -4,6 +4,7 @@
  */
 package com.mycompany.ewalletproject;
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 
 
@@ -32,17 +33,28 @@ public class LandingPageController {
     private void switchToAddNote() throws IOException {
         App.setRoot("AddNote");
     }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
-//    private void switchToAddCard() throws IOException {
-//        App.setRoot("AddCard");
-//    }
+    @FXML
+    private void switchToSaveWallet() throws IOException {
+        Database.get().save(Wallet.get());
+        Wallet.set(new Wallet());
+        App.setRoot("SaveWallet");
+    }
+    @FXML
+    private void switchToLoadWallet() throws IOException {
+        //testing
+        for (Wallet w: Database.get().getDB()){
+            w.printAll();
+        }
+        App.setRoot("LoadWallet");
+    }
+    @FXML
+    private void switchToOpenWallet() throws IOException {
+        App.setRoot("OpenWallet");
+    }
+    @FXML
+    private void switchToAddCash() throws IOException {
+        App.setRoot("AddCash");
+    }
  
 }
+

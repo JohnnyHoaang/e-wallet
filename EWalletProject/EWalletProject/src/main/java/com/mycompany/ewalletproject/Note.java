@@ -47,7 +47,7 @@ public class Note implements IWalletItem{
   public void remind() throws InterruptedException{
     while(true){
     Thread.sleep(this.getReminderFrequency());
-    // make sound
+    System.out.println("Reminding!");
     }
   }
 
