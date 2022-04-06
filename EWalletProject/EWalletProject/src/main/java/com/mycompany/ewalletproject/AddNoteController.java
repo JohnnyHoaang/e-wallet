@@ -38,15 +38,15 @@ public class AddNoteController {
            if(secReminder.isSelected()){
                note.setReminderFrequency(Long.parseLong(reminderFreq.getText())*1000);
                remindThread.start();
-           }
+            }
            else if(minReminder.isSelected()){
                note.setReminderFrequency(Long.parseLong(reminderFreq.getText())*60000);
                remindThread.start();
-           }
+         }
            else if(daysReminder.isSelected()){
                note.setReminderFrequency(Long.parseLong(reminderFreq.getText())*3600000);
                remindThread.start();
-           }
+            }
        }
         Wallet.get().add(note);
         App.setRoot("LandingPage");

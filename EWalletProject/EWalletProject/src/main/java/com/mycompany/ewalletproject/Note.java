@@ -43,11 +43,11 @@ public class Note implements IWalletItem{
   public void setReminderFrequency(long reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
   }
-  // reminds note for the user if set up
+
   public void remind() throws InterruptedException{
     while(true){
     Thread.sleep(this.getReminderFrequency());
-     System.out.println("You have one reminder:" + "\n" + this.toString());
+    System.out.println("Reminding!");
     }
   }
 

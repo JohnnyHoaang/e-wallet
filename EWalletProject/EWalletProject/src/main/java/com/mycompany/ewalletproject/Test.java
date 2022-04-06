@@ -18,11 +18,12 @@ public class Test {
     Note othernote = new Note(new Date("1/3"), "hi text 2");
     CreditCard othercc = new CreditCard("Hi", "1231421", new Date("4/6"), "123", 724000);
     PersonalCard otherp = new PersonalCard("Ye", "4243442");
-    Wallet.get().add(othernote);
-    Wallet.get().add(othercc);
-    Wallet.get().add(otherp);
+    w2.add(othernote);
+    w2.add(othercc);
+    w2.add(otherp);
     //Wallet.get().printAll();
     db.get().save(Wallet.get());
+    //give id
     db.get().load(1).printAll();;
   }
 }
