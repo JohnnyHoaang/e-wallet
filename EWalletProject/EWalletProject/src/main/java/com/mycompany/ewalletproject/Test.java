@@ -24,6 +24,6 @@ public class Test {
     //Wallet.get().printAll();
     db.get().save(Wallet.get());
     //give id
-    db.get().load(1).printAll();;
+    db.get().load(0).printAll();;
   }
 }
