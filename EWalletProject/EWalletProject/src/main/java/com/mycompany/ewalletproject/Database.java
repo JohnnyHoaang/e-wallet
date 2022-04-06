@@ -5,8 +5,11 @@ import java.util.ArrayList;
 public class Database{
     ArrayList<Wallet> db = new ArrayList<Wallet>();
     private static Database self = new Database();
-    public Database get(){return self;}
+    public static Database get(){return self;}
 
+    public ArrayList<Wallet> getDB(){
+        return this.db;
+    }
     public void save(Wallet wallet){
         for (Wallet w: db){
             if (w.getID() == wallet.getID()){
