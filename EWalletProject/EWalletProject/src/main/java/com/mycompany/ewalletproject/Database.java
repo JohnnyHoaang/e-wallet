@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Database{
     ArrayList<Wallet> db = new ArrayList<Wallet>();
     private static Database self = new Database();
-    public static Database get(){return self;}
+    public Database get(){return self;}
 
     public void save(Wallet wallet){
         for (Wallet w: db){
