@@ -18,6 +18,7 @@ public class DeleteCardController {
     }
     @FXML
     private void deleteCard() throws IOException {
+        Wallet.get().deleteCard(cardNumber.getText(), cardName.getText());
         App.setRoot("LandingPage");
         
     }

@@ -27,8 +27,8 @@ public class CreditCardController {
         CreditCard credit = new CreditCard(cardName.getText(), cardNumber.getText(), 
                 new Date(expiryDate.getText()), securityCode.getText(), 
                 Double.parseDouble(creditLimit.getText()));
-        System.out.println(credit);
+        //System.out.println(credit);
+        Wallet.get().add(credit);
         App.setRoot("LandingPage");
-        
     }
 }

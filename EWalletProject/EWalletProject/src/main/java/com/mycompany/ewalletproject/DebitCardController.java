@@ -21,7 +21,8 @@ public class DebitCardController {
     @FXML
     private void addDebitCard() throws IOException {
         DebitCard debit = new DebitCard(cardName.getText(), cardNumber.getText(), new Bank(Integer.parseInt(cardAmount.getText())));
-        System.out.println(debit);
+        //System.out.println(debit);
+        Wallet.get().add(debit);
         App.setRoot("LandingPage");
         
     }

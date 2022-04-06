@@ -44,6 +44,7 @@ public class AddNoteController {
 //                note.setReminderFrequency(Long.parseLong(reminderFreq.getText())*3600000);
 //            }
 //        }
+        Wallet.get().add(note);
         App.setRoot("LandingPage");
     }
 

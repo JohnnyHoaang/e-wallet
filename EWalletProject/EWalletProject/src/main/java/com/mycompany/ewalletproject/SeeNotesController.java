@@ -8,10 +8,9 @@ import javafx.scene.control.*;
 
 public class SeeNotesController {
 
-
-    
     @FXML
     private void switchToLandingPage() throws IOException{
+        Wallet.get().printAll();
         App.setRoot("LandingPage");
     }
 
