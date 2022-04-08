@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.controllers;
+import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.Database;
+import com.mycompany.ewalletproject.Wallet;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
