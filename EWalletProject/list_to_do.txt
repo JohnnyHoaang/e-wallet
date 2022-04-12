@@ -1,4 +1,5 @@
 Important
+fix buttons for load wallet , load notes
 
 Unit tests 
 Cash / Debit amount

@@ -12,7 +12,6 @@ module-info.class
 com\mycompany\ewalletproject\controllers\SeeNotesController.class
 com\mycompany\ewalletproject\controllers\CreditCardController.class
 com\mycompany\ewalletproject\PersonalCard.class
-com\mycompany\ewalletproject\controllers\SecondaryController.class
 com\mycompany\ewalletproject\controllers\AddNoteController.class
 com\mycompany\ewalletproject\controllers\DebitCardController.class
 com\mycompany\ewalletproject\controllers\PaymentCardController.class

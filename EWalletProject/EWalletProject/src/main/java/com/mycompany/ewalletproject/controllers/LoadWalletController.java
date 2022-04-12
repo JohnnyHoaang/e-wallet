@@ -1,10 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-<<<<<<< HEAD
-=======
 import com.mycompany.ewalletproject.Database;
->>>>>>> a257c47a31111cc56dbec8f89b3170ec1e5d09e7
 import com.mycompany.ewalletproject.Wallet;
 
 import java.io.IOException;

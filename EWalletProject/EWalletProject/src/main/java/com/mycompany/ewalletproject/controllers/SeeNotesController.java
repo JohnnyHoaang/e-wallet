@@ -29,7 +29,7 @@ public class SeeNotesController implements Initializable {
         int count = 0;
         for (String note: notes){
             Text t = new Text(note);
-            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth(),100);
+            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth(),t.getLayoutBounds().getHeight());
             r.setFill(Color.WHITE);
             StackPane stack = new StackPane();
             stack.getChildren().addAll(r,t);
@@ -39,10 +39,6 @@ public class SeeNotesController implements Initializable {
     }
     @FXML
     private void switchToLandingPage() throws IOException{
-<<<<<<< HEAD
-=======
-
->>>>>>> a257c47a31111cc56dbec8f89b3170ec1e5d09e7
         App.setRoot("LandingPage");
     }
 
