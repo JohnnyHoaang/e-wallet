@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\DebitCard.java
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\IWalletItem.java
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PaymentCardController.java
@@ -30,3 +31,69 @@ C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalle
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Test.java
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\RemindThread.java
 C:\Users\offic\Desktop\Winter-2022\Java-IV\Project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\AddCashController.java
+=======
+<<<<<<< HEAD
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\App.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PaymentCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\DebitCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Database.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PersonalCard.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PersonalCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Date.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\SeeNotesController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Bank.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PaymentCard.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Wallet.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Cash.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\CreditCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\LandingPageController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PayController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\SecondaryController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\AddNoteController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\IWalletItem.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\CreditCard.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\module-info.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\SystemInfo.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\AddCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\DeleteCardController.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Note.java
+C:\Users\Johnny Hoang\Desktop\w22\java\project\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\DebitCard.java
+=======
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Bank.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\LandingPageController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Cash.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\OpenWalletController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Database.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Test.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Wallet.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\LoadWalletController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PersonalCard.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\AddCashController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PayController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\IWalletItem.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\DebitCard.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\AddCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\DebitCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\DeleteCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Note.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\Date.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PaymentCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\SeeNotesController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\CreditCard.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\SystemInfo.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\RemindThread.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\module-info.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\SecondaryController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PersonalCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\App.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\SaveWalletController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PaymentCard.java
+<<<<<<< HEAD
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\CreditCardController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\PersonalCardController.java
+>>>>>>> b259bf33c0c45b75e0485b8998138318558853d2
+=======
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\AddNoteController.java
+C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\CreditCardController.java
+>>>>>>> 6b38a670ad6af4980363273f52c774f414f6aa07
+>>>>>>> a257c47a31111cc56dbec8f89b3170ec1e5d09e7
