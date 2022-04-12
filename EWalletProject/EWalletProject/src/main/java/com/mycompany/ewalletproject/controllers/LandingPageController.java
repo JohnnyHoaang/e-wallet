@@ -44,10 +44,6 @@ public class LandingPageController {
     }
     @FXML
     private void switchToLoadWallet() throws IOException {
-        //testing
-        for (Wallet w: Database.get().getDB()){
-            w.printAll();
-        }
         App.setRoot("LoadWallet");
     }
     @FXML
