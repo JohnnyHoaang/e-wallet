@@ -59,14 +59,14 @@ public class Wallet {
             this.wallet.remove(iw);
         }
     }
-    public String browseNotes(){
-        String result = "";
+    public ArrayList<String> browseNotes(){
+        ArrayList<String> notes = new ArrayList<String>();
         for (IWalletItem w: wallet){
             if(w instanceof Note){
-                result+= w.toString() + "\n";
+                notes.add(w.toString());
             }
         }
-        return result;
+        return notes;
     }
     
     public void printAll(){

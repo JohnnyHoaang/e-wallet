@@ -12,23 +12,25 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.control.*;
 
 public class LoadWalletController implements Initializable {
-    @FXML private Pane walletPane;
+    @FXML private GridPane walletPane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        System.out.println("Initialized");
+        int count = 0;
         for (Wallet w: Database.get().getDB()){
             String walletStr = "Wallet " + w.getID();
+            // could get amount too
             Button button = new Button("Wallet " + w.getID());
-            System.out.println("reached 1");
             String[] words = walletStr.split(" ");
             button.setOnAction(e-> setWallet(Integer.parseInt(words[1])));
-            walletPane.getChildren().add(button);
-            System.out.println("reached 2");
+            walletPane.add(button,0, count);
+            count++;
         }
     }
     
@@ -40,6 +42,7 @@ public class LoadWalletController implements Initializable {
     private void setWallet(int id){
         Wallet wallet = Database.get().load(id);
         Wallet.set(wallet);
+        Wallet.get().printAll();
     }
 
 }

@@ -1,0 +1,10 @@
+Important
+
+Unit tests 
+Cash / Debit amount
+Observable for cash and debit 
+Threading for each button if needed
+
+Less important
+
+Make application bigger for notes (design)
