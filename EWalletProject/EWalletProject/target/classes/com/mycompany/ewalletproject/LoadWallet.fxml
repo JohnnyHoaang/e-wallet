@@ -57,6 +57,10 @@
                               </Text>
                            </children>
                         </Pane>
+                        <Pane fx:id="walletPane" prefHeight="300" prefWidth="300">
+                           <children>
+                           </children>
+                        </Pane>
                         <Pane prefHeight="49.0" prefWidth="353.0">
                            <children>
                               <Button layoutX="137.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLandingPage" style="-fx-background-color: BLACK;" text="MAIN PAGE" textFill="WHITE" />

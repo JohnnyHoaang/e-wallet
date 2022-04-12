@@ -24,9 +24,11 @@ public class LoadWalletController implements Initializable {
         for (Wallet w: Database.get().getDB()){
             String walletStr = "Wallet " + w.getID();
             Button button = new Button("Wallet " + w.getID());
+            System.out.println("reached 1");
             String[] words = walletStr.split(" ");
             button.setOnAction(e-> setWallet(Integer.parseInt(words[1])));
             walletPane.getChildren().add(button);
+            System.out.println("reached 2");
         }
     }
     

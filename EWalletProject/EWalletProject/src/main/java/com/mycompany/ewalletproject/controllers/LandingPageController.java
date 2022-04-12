@@ -40,6 +40,7 @@ public class LandingPageController {
     private void switchToSaveWallet() throws IOException {
         Database.get().save(Wallet.get());
         Wallet.set(new Wallet());
+        System.out.println(Wallet.get());
         App.setRoot("SaveWallet");
     }
     @FXML
