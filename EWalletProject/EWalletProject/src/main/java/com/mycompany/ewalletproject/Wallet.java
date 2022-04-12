@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject;
 import java.util.ArrayList;
 
 public class Wallet {
+    private static int sequenceID = 0;
     private int id;
     private ArrayList<IWalletItem> wallet; 
     private static Wallet self = new Wallet();
@@ -13,12 +14,14 @@ public class Wallet {
 
     public Wallet(){
         this.wallet = new ArrayList<IWalletItem>();
+        this.id = Wallet.sequenceID++;
     }
     // copy constructor
     public Wallet(Wallet copyWallet){
         for (IWalletItem iw : copyWallet.getWallet()){
             this.wallet.add(iw);
         }
+        this.id = Wallet.sequenceID++;
     }
 
     public ArrayList<IWalletItem> getWallet(){
