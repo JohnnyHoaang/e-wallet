@@ -1,15 +1,17 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.walletitems;
 
 public class Note implements IWalletItem{
   private Date creationDate;
   private String text;
   private boolean reminder = false;
   private long reminderFrequency;
+  private static int sequenceNum = 0;
   private int id;
   
   public Note(Date creationDate, String text) {
     this.creationDate = creationDate;
     this.text = text;
+    this.id = sequenceNum++;
   }
   
   //Get and Set Methods

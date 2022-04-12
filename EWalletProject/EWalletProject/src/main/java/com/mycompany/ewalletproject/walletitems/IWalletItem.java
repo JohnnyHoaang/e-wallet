@@ -1,5 +1,5 @@
 
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.walletitems;
 /**
  *
  * @author 2038364

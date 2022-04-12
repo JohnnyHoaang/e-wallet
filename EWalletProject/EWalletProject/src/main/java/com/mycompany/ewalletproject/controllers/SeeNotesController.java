@@ -1,7 +1,8 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Wallet;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -29,8 +30,9 @@ public class SeeNotesController implements Initializable {
         int count = 0;
         for (String note: notes){
             Text t = new Text(note);
-            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth(),t.getLayoutBounds().getHeight());
+            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+5,t.getLayoutBounds().getHeight()+5);
             r.setFill(Color.WHITE);
+            r.setStroke(Color.BLACK);
             StackPane stack = new StackPane();
             stack.getChildren().addAll(r,t);
             notePane.add(stack, 0, count); //row column

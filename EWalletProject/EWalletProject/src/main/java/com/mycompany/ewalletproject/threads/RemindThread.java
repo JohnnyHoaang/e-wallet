@@ -1,4 +1,6 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.threads;
+
+import com.mycompany.ewalletproject.walletitems.Note;
 
 public class RemindThread extends Thread{
   private Note note;

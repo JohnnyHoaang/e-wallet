@@ -1,6 +1,10 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.storage;
 
 import java.util.ArrayList;
+
+import com.mycompany.ewalletproject.walletitems.IWalletItem;
+import com.mycompany.ewalletproject.walletitems.Note;
+import com.mycompany.ewalletproject.walletitems.PaymentCard;
 
 public class Wallet {
     private static int sequenceID = 0;

@@ -1,9 +1,10 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Bank;
-import com.mycompany.ewalletproject.DebitCard;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.walletitems.Bank;
+import com.mycompany.ewalletproject.walletitems.DebitCard;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;

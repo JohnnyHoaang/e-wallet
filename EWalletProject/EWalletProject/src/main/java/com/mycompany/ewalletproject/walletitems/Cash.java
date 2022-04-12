@@ -1,4 +1,4 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.walletitems;
 
 public class Cash {
   private double amount;

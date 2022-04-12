@@ -4,8 +4,9 @@
  */
 package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Database;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Database;
+import com.mycompany.ewalletproject.storage.Wallet;
+
 import java.io.IOException;
 
 import javafx.fxml.FXML;

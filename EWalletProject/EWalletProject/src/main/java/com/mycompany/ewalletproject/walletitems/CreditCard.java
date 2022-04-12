@@ -1,4 +1,4 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.walletitems;
 
 public class CreditCard extends PaymentCard{
   private Date expiryDate;

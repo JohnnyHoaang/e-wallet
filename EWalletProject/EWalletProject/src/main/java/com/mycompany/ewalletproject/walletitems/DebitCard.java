@@ -1,4 +1,4 @@
-package com.mycompany.ewalletproject;
+package com.mycompany.ewalletproject.walletitems;
 
 public class DebitCard extends PaymentCard{
   private Bank bank;  

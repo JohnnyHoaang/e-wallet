@@ -1,8 +1,9 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Date;
-import com.mycompany.ewalletproject.PersonalCard;
+import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.PersonalCard;
+
 import java.io.IOException;
 
 import javafx.fxml.FXML;

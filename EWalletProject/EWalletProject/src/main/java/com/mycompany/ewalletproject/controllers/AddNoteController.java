@@ -1,10 +1,11 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Date;
-import com.mycompany.ewalletproject.Note;
-import com.mycompany.ewalletproject.RemindThread;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.threads.RemindThread;
+import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.Note;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;

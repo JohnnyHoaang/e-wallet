@@ -1,8 +1,8 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Database;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Database;
+import com.mycompany.ewalletproject.storage.Wallet;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,14 +12,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.scene.control.*;
 
 public class LoadWalletController implements Initializable {
     @FXML private GridPane walletPane;
-
+    @FXML private Pane ewalletPane;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         int count = 0;
@@ -36,7 +38,6 @@ public class LoadWalletController implements Initializable {
     
     @FXML
     private void switchToLandingPage() throws IOException{
-        Wallet.get().printAll();
         App.setRoot("LandingPage");
     }
 

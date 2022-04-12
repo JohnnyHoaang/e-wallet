@@ -1,7 +1,8 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.Wallet;
+import com.mycompany.ewalletproject.storage.Wallet;
+
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
