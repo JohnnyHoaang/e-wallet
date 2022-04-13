@@ -2,6 +2,8 @@ package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.walletitems.CreditCard;
+import com.mycompany.ewalletproject.walletitems.DebitCard;
 import com.mycompany.ewalletproject.walletitems.PaymentCard;
 
 import java.io.IOException;
@@ -13,6 +15,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
 
 public class PayController implements Initializable {
@@ -21,7 +24,13 @@ public class PayController implements Initializable {
     private TextField amount;
     @FXML
     private ComboBox<String> payBox;
-    
+    @FXML
+    private Text firstText;
+    @FXML
+    private Text secondText;
+    @FXML 
+    private Text paymentConfirmation;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         ObservableList<String> options = FXCollections.observableArrayList(Wallet.get().getPaymentCardsList());
@@ -35,7 +44,29 @@ public class PayController implements Initializable {
     @FXML
     private void pay() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
-        pc.withdraw(Integer.parseInt(amount.getText()));
-        App.setRoot("LandingPage");
+        boolean payConfirm = pc.withdraw(Integer.parseInt(amount.getText()));
+        if(payConfirm){
+            paymentConfirmation.setText("The payment was successful!");
+        } else {
+            paymentConfirmation.setText("The payment was not successful. Please try again.");
+        }
+        //App.setRoot("LandingPage");
+    }
+    @FXML 
+    private void show() throws IOException{
+        PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
+        if (pc.getCardType().equals("debit")){
+            setTextBlank();
+            firstText.setText("The amount of the card is: $"+ ((DebitCard)pc).getBank().getAmount());
+        }
+        else if(pc.getCardType().equals("credit")) {
+            setTextBlank();
+            firstText.setText("The limit of the card is: $"+ ((CreditCard)pc).getLimit());
+            secondText.setText("The balance of the card is: $"+ ((CreditCard)pc).getBalance());
+        }
+    }
+    private void setTextBlank(){
+        firstText.setText("");
+        secondText.setText("");
     }
 }

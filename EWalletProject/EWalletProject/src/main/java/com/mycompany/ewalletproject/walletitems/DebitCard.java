@@ -25,7 +25,10 @@ public class DebitCard extends PaymentCard{
     }
     return checkFunds;
   }
-
+  @Override
+  public String getCardType(){
+    return "debit";
+  }
   //Get Method
   public Bank getBank() {
     return bank;

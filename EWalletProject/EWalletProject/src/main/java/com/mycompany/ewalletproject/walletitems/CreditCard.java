@@ -36,6 +36,10 @@ public class CreditCard extends PaymentCard{
     }
     return true;
   }
+  @Override
+  public String getCardType(){
+    return "credit";
+  }
   public String toString(){
       String repr = "\nDate: " + this.expiryDate + 
               " \nSecurity code: " + this.secCode + 
