@@ -15,7 +15,7 @@ public class DebitCard extends PaymentCard{
     }
     return check;
   }
-
+  @Override
   public boolean withdraw(int amount){
     boolean checkFunds = this.checkFundsAvailability(amount);
     int bankAmount = this.bank.getAmount();

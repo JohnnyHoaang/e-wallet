@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.mycompany.ewalletproject.walletitems.IWalletItem;
 import com.mycompany.ewalletproject.walletitems.Note;
 import com.mycompany.ewalletproject.walletitems.PaymentCard;
+import com.mycompany.ewalletproject.walletitems.PersonalCard;
 
 public class Wallet {
     private static int sequenceID = 0;
@@ -47,6 +48,11 @@ public class Wallet {
                     this.wallet.remove(i);
                 }
             }
+            else if(wallet.get(i) instanceof PersonalCard){
+                if(((PersonalCard)wallet.get(i)).getCardNumber().equals(cardNumber)){
+                    this.wallet.remove(i);
+                }
+            }
         }
     }
     public void deleteNote(int id){
@@ -72,7 +78,38 @@ public class Wallet {
         }
         return notes;
     }
+    public ArrayList<String> getPaymentCardsList(){
+        ArrayList<String> pc = new ArrayList<String>();
+        for (IWalletItem w: wallet){
+            if(w instanceof PaymentCard){
+                pc.add(((PaymentCard)w).getCardNumber());
+            }
+        }
+        return pc;
+    }
+    public ArrayList<String> getAllCardsList(){
+        ArrayList<String> cards = new ArrayList<String>();
+        for (IWalletItem w: wallet){
+            if(w instanceof PaymentCard){
+                cards.add(((PaymentCard)w).getCardNumber());
+            }
+            else if(w instanceof PersonalCard){
+                cards.add(((PersonalCard)w).getCardNumber());
+            }
+        }
+        return cards;
+    }
     
+    public PaymentCard loadPaymentCard(String cardNumber){
+        for(IWalletItem item: this.wallet){
+            if(item instanceof PaymentCard){
+                if(((PaymentCard)item).getCardNumber().equals(cardNumber)){
+                    return (PaymentCard)item;
+                }
+            }
+        }
+        return null;
+    }
     public void printAll(){
         for (IWalletItem i : wallet){
             System.out.println(i);

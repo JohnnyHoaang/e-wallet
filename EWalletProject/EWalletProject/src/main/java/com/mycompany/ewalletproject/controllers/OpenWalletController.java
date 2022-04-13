@@ -27,21 +27,18 @@ public class OpenWalletController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         int count = 0;
-        Wallet wallet = Wallet.get();
-
-        for (IWalletItem item : wallet.getWallet()){
+        for (IWalletItem item : Wallet.get().getWallet()){
             StackPane stack = new StackPane();
             Text t = new Text(item.toString());
             t.setFill(Color.BLUE);
             Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+5,t.getLayoutBounds().getHeight()+5);
-            r.setFill(Color.WHITE);
+            r.setFill(Color.ORANGE);
             r.setStroke(Color.BLACK);
             stack.getChildren().addAll(r,t);
             walletPane.add(stack, 0, count);
 
             stack.setAlignment(Pos.TOP_LEFT);
             stack.setPadding(new Insets(10));
-            System.out.println(item);
             count++;
         }
         

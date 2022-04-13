@@ -24,4 +24,7 @@ public class PaymentCard implements IWalletItem{
     public String getCardNumber(){
         return this.cardNumber;
     }
+    public boolean withdraw(int amount){
+        return false;
+    }
 }

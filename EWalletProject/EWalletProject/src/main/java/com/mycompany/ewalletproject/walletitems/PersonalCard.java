@@ -25,7 +25,7 @@ public class PersonalCard implements IWalletItem{
         this.name = name;
     }
 
-    public String getNumber() {
+    public String getCardNumber() {
         return number;
     }
     public void setNumber(String number) {
@@ -52,6 +52,7 @@ public class PersonalCard implements IWalletItem{
         }
         return result;
     }
+    
 
     
 }

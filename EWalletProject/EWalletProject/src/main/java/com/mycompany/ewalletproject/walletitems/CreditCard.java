@@ -26,13 +26,21 @@ public class CreditCard extends PaymentCard{
   public double getBalance(){
     return this.balance;
   }
-  public void pay(double amount){
-    this.balance+= amount;
+  @Override
+  public boolean withdraw(int amount){
+    if((this.balance+amount) > limit){
+      return false;
+    }
+    else {
+      this.balance+= amount;
+    }
+    return true;
   }
   public String toString(){
       String repr = "\nDate: " + this.expiryDate + 
               " \nSecurity code: " + this.secCode + 
-              " \nLimit:" + this.limit;
+              " \nLimit:" + this.limit+
+              "\nBalance:" + this.balance;
       return super.toString() + repr;
   }
 
