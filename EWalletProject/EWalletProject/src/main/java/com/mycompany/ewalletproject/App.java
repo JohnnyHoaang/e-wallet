@@ -12,18 +12,28 @@ import java.io.IOException;
  * JavaFX App
  */
 public class App extends Application {
-
+    private static Stage stage;
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("LandingPage"), 600, 400);
+        this.stage = stage;
         stage.setScene(scene);
         stage.show();
     }
 
     public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        if ((fxml.equals("SeeNotes")) || (fxml.equals("OpenWallet"))){
+            stage.setHeight(610);
+            stage.setWidth(810);
+            scene.setRoot(loadFXML(fxml));
+        }
+        else{
+            stage.setHeight(400);
+            stage.setWidth(600);
+            scene.setRoot(loadFXML(fxml));
+        }
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
