@@ -19,6 +19,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.control.*;
+import javafx.geometry.*;
 
 public class SeeNotesController implements Initializable {
 
@@ -31,10 +32,12 @@ public class SeeNotesController implements Initializable {
         for (String note: notes){
             Text t = new Text(note);
             Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+5,t.getLayoutBounds().getHeight()+5);
-            r.setFill(Color.WHITE);
+            r.setFill(Color.ORANGE);
             r.setStroke(Color.BLACK);
             StackPane stack = new StackPane();
             stack.getChildren().addAll(r,t);
+            stack.setAlignment(Pos.TOP_LEFT);
+            stack.setPadding(new Insets(10)); 
             notePane.add(stack, 0, count); //row column
             count++;
         }
