@@ -1,6 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.Date;
 import com.mycompany.ewalletproject.walletitems.PersonalCard;
 
@@ -26,11 +27,11 @@ public class PersonalCardController {
     private void addPersonalCard() throws IOException {
         if (expiryDate.equals("")){
             PersonalCard personal = new PersonalCard(cardName.getText(), cardNumber.getText());
-            System.out.println(personal);
+            Wallet.get().add(personal);
         }
         else {
             PersonalCard personal = new PersonalCard(cardName.getText(), cardNumber.getText(), new Date(expiryDate.getText()));
-            System.out.println(personal);
+            Wallet.get().add(personal);
         }
         App.setRoot("LandingPage");
         
