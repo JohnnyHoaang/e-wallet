@@ -40,7 +40,7 @@ public class Wallet {
     public void add(IWalletItem wi){
         this.wallet.add(wi);
     }
-    public void deleteCard(String cardNumber, String cardName){
+    public void deleteCard(String cardNumber){
         for (int i=0; i<wallet.size();i++){
             if(wallet.get(i) instanceof PaymentCard){
                 if(((PaymentCard)wallet.get(i)).getCardNumber().equals(cardNumber)){
