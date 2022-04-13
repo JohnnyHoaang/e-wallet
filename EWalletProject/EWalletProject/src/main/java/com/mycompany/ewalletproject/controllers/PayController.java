@@ -35,6 +35,13 @@ public class PayController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle){
         ObservableList<String> options = FXCollections.observableArrayList(Wallet.get().getPaymentCardsList());
         payBox.setItems(options);
+        payBox.setOnAction(e-> {
+            try {
+                show();
+            } catch (IOException error) {
+                error.printStackTrace();
+            }
+        });
     }
 
     @FXML
@@ -52,7 +59,6 @@ public class PayController implements Initializable {
         }
         //App.setRoot("LandingPage");
     }
-    @FXML 
     private void show() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
         if (pc.getCardType().equals("debit")){
@@ -68,5 +74,6 @@ public class PayController implements Initializable {
     private void setTextBlank(){
         firstText.setText("");
         secondText.setText("");
+        paymentConfirmation.setText("");
     }
 }

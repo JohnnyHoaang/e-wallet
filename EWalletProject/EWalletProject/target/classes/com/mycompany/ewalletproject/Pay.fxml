@@ -93,7 +93,7 @@
                            <children>
                               <Button layoutX="315.0" layoutY="23.0" mnemonicParsing="false" onAction="#pay" style="-fx-background-color: BLACK;" text="PAY" textFill="WHITE" />
                               <Button layoutY="23.0" mnemonicParsing="false" onAction="#switchToLandingPage" style="-fx-background-color: BLACK;" text="MAIN PAGE" textFill="WHITE" />
-                              <Button layoutX="128.0" layoutY="23.0" mnemonicParsing="false" onAction="#show" style="-fx-background-color: BLACK;" text="SHOW CARD AMOUNT" textFill="WHITE" />
+                              <Button layoutX="128.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="SHOW CARD AMOUNT" textFill="WHITE" />
                            </children>
                         </Pane>
                      </children>
