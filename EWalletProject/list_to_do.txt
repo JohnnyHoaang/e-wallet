@@ -1,11 +1,6 @@
 Important
-fix buttons for load wallet , load notes
 
-Unit tests 
-Cash / Debit amount
 Observable for cash and debit 
 Threading for each button if needed
 
-Less important
-
-Make application bigger for notes (design)
+override wallet when saving again

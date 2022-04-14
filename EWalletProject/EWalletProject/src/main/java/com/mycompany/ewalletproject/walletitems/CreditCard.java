@@ -43,8 +43,8 @@ public class CreditCard extends PaymentCard{
   public String toString(){
       String repr = "\nDate: " + this.expiryDate + 
               " \nSecurity code: " + this.secCode + 
-              " \nLimit:" + this.limit+
-              "\nBalance:" + this.balance;
+              " \nLimit: $" + this.limit+
+              "\nBalance: $" + this.balance;
       return super.toString() + repr;
   }
 

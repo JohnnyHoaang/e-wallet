@@ -38,7 +38,7 @@ public class DebitCard extends PaymentCard{
   }
   public String toString(){
       String repr = "";
-      repr = "\nAmount: "+this.bank.getAmount();
+      repr = "\nAmount: $"+this.bank.getAmount();
       return super.toString() + repr;
   }
 }
