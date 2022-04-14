@@ -2,6 +2,7 @@ package com.mycompany.ewalletproject.storage;
 
 import java.util.ArrayList;
 
+import com.mycompany.ewalletproject.walletitems.Cash;
 import com.mycompany.ewalletproject.walletitems.IWalletItem;
 import com.mycompany.ewalletproject.walletitems.Note;
 import com.mycompany.ewalletproject.walletitems.PaymentCard;
@@ -11,6 +12,7 @@ public class Wallet {
     private static int sequenceID = 0;
     private int id;
     private ArrayList<IWalletItem> wallet; 
+    private Cash cash = new Cash();
     private static Wallet self = new Wallet();
     // get for static instance
     public static Wallet get(){ return self;}
@@ -19,6 +21,7 @@ public class Wallet {
 
     public Wallet(){
         this.wallet = new ArrayList<IWalletItem>();
+        this.wallet.add(cash);
         this.id = Wallet.sequenceID++;
     }
     // copy constructor
@@ -29,6 +32,9 @@ public class Wallet {
         this.id = Wallet.sequenceID++;
     }
 
+    public Cash getCash(){
+        return (Cash)wallet.get(0);
+    }
     public ArrayList<IWalletItem> getWallet(){
         return this.wallet;
     }

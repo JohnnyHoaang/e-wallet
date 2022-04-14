@@ -1,6 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.Cash;
 
 import java.io.IOException;
@@ -21,7 +22,8 @@ public class PayCashController implements Initializable {
     private Text cashAmount;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
-        double ca = Cash.get().getAmount();
+        //double ca = Cash.get().getAmount();
+        double ca = Wallet.get().getCash().getAmount();
         this.cashAmount.setText("Cash Amount: $" + ca);
     }
     @FXML
@@ -30,8 +32,9 @@ public class PayCashController implements Initializable {
     }
     @FXML
     private void pay() throws IOException{
-        boolean payCheck = Cash.get().pay(Double.parseDouble(this.amount.getText()));
-        cashAmount.setText("Cash Amount: $" + Cash.get().getAmount());
+        Cash cash = Wallet.get().getCash();
+        boolean payCheck = cash.pay(Double.parseDouble(this.amount.getText()));
+        cashAmount.setText("Cash Amount: $" + cash.getAmount());
         if(payCheck){
             // your payment was successful
         }

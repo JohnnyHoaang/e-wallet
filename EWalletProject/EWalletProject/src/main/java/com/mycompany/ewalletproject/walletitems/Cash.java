@@ -1,10 +1,7 @@
 package com.mycompany.ewalletproject.walletitems;
 
-public class Cash {
+public class Cash implements IWalletItem{
   private double amount;
-  private static Cash self = new Cash();
-  // get for static instance
-  public static Cash get(){ return self;}
 
   public Cash(){
     this.amount = 0;
@@ -33,6 +30,9 @@ public class Cash {
       check = true;
     }
     return check;
+  }
+  public String toString(){
+    return "$" + this.amount;
   }
 
 }

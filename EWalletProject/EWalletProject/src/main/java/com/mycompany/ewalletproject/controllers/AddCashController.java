@@ -1,6 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.Cash;
 
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class AddCashController implements Initializable{
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        double cashAmount = Cash.get().getAmount();
+        double cashAmount = Wallet.get().getCash().getAmount();
         this.currentAmount.setText(this.currentAmount.getText() + "$" + cashAmount);
     }
     @FXML
@@ -27,10 +28,11 @@ public class AddCashController implements Initializable{
     }
     @FXML
     private void addCash() throws IOException{
-        double cashAmount = Cash.get().getAmount();
+        Cash cash = Wallet.get().getCash();
+        double cashAmount = cash.getAmount();
         double addAmount = Double.parseDouble(this.amount.getText());
-        Cash.get().setAmount(cashAmount + addAmount);
-        cashAmount = Cash.get().getAmount();
+        cash.setAmount(cashAmount + addAmount);
+        cashAmount = cash.getAmount();
         setCurrentAmounText(cashAmount);
     }
     private void setCurrentAmounText(double currentAmount){
