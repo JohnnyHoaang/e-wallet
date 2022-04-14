@@ -25,7 +25,7 @@ public class PersonalCardController {
     }
     @FXML
     private void addPersonalCard() throws IOException {
-        if (expiryDate.equals("")){
+        if (expiryDate.getText().equals("")){
             PersonalCard personal = new PersonalCard(cardName.getText(), cardNumber.getText());
             Wallet.get().add(personal);
         }

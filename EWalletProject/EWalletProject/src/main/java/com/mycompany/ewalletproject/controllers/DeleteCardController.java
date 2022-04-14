@@ -30,7 +30,6 @@ public class DeleteCardController implements Initializable {
     }
     @FXML
     private void deleteCard() throws IOException {
-//        Wallet.get().deleteCard();
         System.out.println(deleteCardBox.getValue());
         Wallet.get().deleteCard(deleteCardBox.getValue());
         App.setRoot("LandingPage");

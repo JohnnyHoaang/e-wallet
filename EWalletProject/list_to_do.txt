@@ -1,6 +1,6 @@
 Important
 
 Observable for cash and debit 
-Threading for each button if needed
 
 override wallet when saving again
+The wallet can have a maximum of 10 cards and 10 notes at any single point in time. 
