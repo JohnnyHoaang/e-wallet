@@ -11,9 +11,11 @@ public class Database{
         return this.db;
     }
     public void save(Wallet wallet){
+        
         for (Wallet w: db){
             if (w.getID() == wallet.getID()){
-                throw new UnsupportedOperationException("Cannot add same wallet to the database");
+                w = wallet;
+                return;
             }
         }
         db.add(wallet);
