@@ -24,7 +24,7 @@ public class App extends Application {
     }
 
     public static void setRoot(String fxml) throws IOException {
-        if ((fxml.equals("SeeNotes")) || (fxml.equals("OpenWallet"))){
+        if ((fxml.equals("SeeNotes")) || (fxml.equals("OpenWallet")) || (fxml.equals("LoadWallet"))){
             stage.setHeight(610);
             stage.setWidth(810);
             scene.setRoot(loadFXML(fxml));
