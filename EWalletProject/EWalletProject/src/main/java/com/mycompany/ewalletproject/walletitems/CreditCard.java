@@ -15,6 +15,9 @@ public class CreditCard extends PaymentCard  implements ISubject{
 
   public CreditCard(String cardName, String cardNumber, Date expiryDate, String secCode, double limit){
     super(cardName, cardNumber);
+    if (limit<100 || limit>5000){
+      throw new IllegalArgumentException("Limit is too high or too low.");
+    }
     this.expiryDate = expiryDate;
     this.secCode = secCode;
     this.limit = limit;
