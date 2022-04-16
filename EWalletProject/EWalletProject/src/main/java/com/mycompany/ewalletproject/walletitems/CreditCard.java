@@ -15,6 +15,9 @@ public class CreditCard extends PaymentCard  implements ISubject{
 
   public CreditCard(String cardName, String cardNumber, Date expiryDate, String secCode, double limit){
     super(cardName, cardNumber);
+    if (limit<100 || limit>5000){
+      throw new IllegalArgumentException("Limit is too high or too low.");
+    }
     this.expiryDate = expiryDate;
     this.secCode = secCode;
     this.limit = limit;
@@ -42,7 +45,8 @@ public class CreditCard extends PaymentCard  implements ISubject{
 
   @Override
   public void detach(IObserver a){
-    this.observers.remove(a);
+    int index = observers.indexOf(a);
+    this.observers.remove(index);
   }
 
   @Override
@@ -51,6 +55,9 @@ public class CreditCard extends PaymentCard  implements ISubject{
       // ob.update(this.getBalance(), this.getLimit());
       ob.update();
     }
+  }
+  public void deleteObservers(){
+    observers.clear();
   }
 
   @Override

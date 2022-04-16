@@ -13,7 +13,6 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -53,7 +52,9 @@ public class PayCardController implements Initializable {
     private void pay() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
         if(pc.getCardType().equals("credit")){
-            CreditObserver cro = new CreditObserver((CreditCard)(pc));
+            CreditCard cc = (CreditCard)pc;
+            cc.deleteObservers();
+            CreditObserver cro = new CreditObserver(cc);
         }
 
         boolean payConfirm = pc.withdraw(Integer.parseInt(amount.getText()));
