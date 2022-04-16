@@ -1,10 +1,7 @@
 package com.mycompany.ewalletproject.observables;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -14,11 +11,11 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+import com.mycompany.ewalletproject.threads.MakeWarningSoundThread;
 import com.mycompany.ewalletproject.walletitems.Cash;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 
-import org.lecturestudio.avdev.AudioStream;
-
+import javafx.application.Platform;
 
 public class Observer implements IObserver{
     private ISubject obs;
@@ -57,13 +54,7 @@ public class Observer implements IObserver{
     
     }
     public void makeSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("./EWalletProject/src/main/java/com/mycompany/ewalletproject/observables/phone.wav");
-        AudioInputStream ais = AudioSystem.getAudioInputStream(file);
-        AudioFormat format = ais.getFormat();
-        DataLine.Info info = new DataLine.Info(Clip.class, format);
-        Clip audioClip = (Clip) AudioSystem.getLine(info);
-        audioClip.open(ais);
-        audioClip.start();
-        ais.close();
+        Thread soundThread = new MakeWarningSoundThread();
+        Platform.runLater(soundThread);
     }
 }
