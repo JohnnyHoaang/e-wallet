@@ -2,10 +2,11 @@ package com.mycompany.ewalletproject.walletitems;
 
 import java.util.ArrayList;
 
+import com.mycompany.ewalletproject.observables.IBalanceObservable;
 import com.mycompany.ewalletproject.observables.IObserver;
 import com.mycompany.ewalletproject.observables.ISubject;
 
-public class CreditCard extends PaymentCard  implements ISubject{
+public class CreditCard extends PaymentCard  implements ISubject, IBalanceObservable{
   private ArrayList<IObserver> observers = new ArrayList<IObserver>();
 
   private Date expiryDate;
@@ -52,8 +53,7 @@ public class CreditCard extends PaymentCard  implements ISubject{
   @Override
   public void notifyObserver(){
     for(IObserver ob : observers){
-      // ob.update(this.getBalance(), this.getLimit());
-      ob.update();
+      ob.update(this);
     }
   }
   public void deleteObservers(){

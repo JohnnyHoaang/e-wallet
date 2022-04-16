@@ -1,6 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.Cash;
 
@@ -33,6 +34,8 @@ public class PayCashController implements Initializable {
     @FXML
     private void pay() throws IOException{
         Cash cash = Wallet.get().getCash();
+        cash.deleteObservers();
+        Observer cro = new Observer(cash);
         boolean payCheck = cash.pay(Double.parseDouble(this.amount.getText()));
         cashAmount.setText("Cash Amount: $" + cash.getAmount());
         if(payCheck){
