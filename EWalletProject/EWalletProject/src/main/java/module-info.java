@@ -3,7 +3,9 @@ module com.mycompany.ewalletproject {
     requires javafx.fxml;
     requires java.base;
     requires junit;
-
+    requires java.desktop;
+    requires avdev;
+    
     opens com.mycompany.ewalletproject to javafx.fxml;
     exports com.mycompany.ewalletproject;
     opens com.mycompany.ewalletproject.controllers to javafx.fxml;
