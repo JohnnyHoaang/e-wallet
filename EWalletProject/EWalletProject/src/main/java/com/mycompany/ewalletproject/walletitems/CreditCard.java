@@ -48,7 +48,8 @@ public class CreditCard extends PaymentCard  implements ISubject{
   @Override
   public void notifyObserver(){
     for(IObserver ob : observers){
-      ob.update(this.getBalance(), this.getLimit());
+      // ob.update(this.getBalance(), this.getLimit());
+      ob.update();
     }
   }
 
