@@ -1,7 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
-import com.mycompany.ewalletproject.observables.CreditObserver;
+import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
@@ -54,7 +54,7 @@ public class PayCardController implements Initializable {
         if(pc.getCardType().equals("credit")){
             CreditCard cc = (CreditCard)pc;
             cc.deleteObservers();
-            CreditObserver cro = new CreditObserver(cc);
+            Observer cro = new Observer(cc);
         }
 
         boolean payConfirm = pc.withdraw(Integer.parseInt(amount.getText()));
