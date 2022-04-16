@@ -1,6 +1,7 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.observables.CreditObserver;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
@@ -51,9 +52,17 @@ public class PayCardController implements Initializable {
     @FXML
     private void pay() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
+        if(pc.getCardType().equals("credit")){
+            CreditObserver cro = new CreditObserver((CreditCard)(pc));
+        }
+
         boolean payConfirm = pc.withdraw(Integer.parseInt(amount.getText()));
         if(payConfirm){
             paymentConfirmation.setText("The payment was successful!");
+
+            if(pc.getCardType().equals("credit")){
+                secondText.setText("The balance of the card is: $"+ ((CreditCard)pc).getBalance());
+            }
         } else {
             paymentConfirmation.setText("The payment was not successful. Please try again.");
         }
