@@ -1,6 +1,13 @@
 package com.mycompany.ewalletproject.walletitems;
 
-public class CreditCard extends PaymentCard{
+import java.util.ArrayList;
+
+import com.mycompany.ewalletproject.observables.IObserver;
+import com.mycompany.ewalletproject.observables.ISubject;
+
+public class CreditCard extends PaymentCard  implements ISubject{
+  private ArrayList<IObserver> observers = new ArrayList<IObserver>();
+
   private Date expiryDate;
   private String secCode;
   private double limit;
@@ -26,6 +33,29 @@ public class CreditCard extends PaymentCard{
   public double getBalance(){
     return this.balance;
   }
+
+  //Subject methods
+  @Override
+  public void attach(IObserver a){
+    this.observers.add(a);
+  }
+
+  @Override
+  public void detach(IObserver a){
+    int index = observers.indexOf(a);
+    this.observers.remove(index);
+  }
+
+  @Override
+  public void notifyObserver(){
+    for(IObserver ob : observers){
+      ob.update(this.getBalance(), this.getLimit());
+    }
+  }
+  public void deleteObservers(){
+    observers.clear();
+  }
+
   @Override
   public boolean withdraw(int amount){
     if((this.balance+amount) > limit){
@@ -34,8 +64,11 @@ public class CreditCard extends PaymentCard{
     else {
       this.balance+= amount;
     }
+
+    this.notifyObserver();
     return true;
   }
+
   @Override
   public String getCardType(){
     return "credit";
