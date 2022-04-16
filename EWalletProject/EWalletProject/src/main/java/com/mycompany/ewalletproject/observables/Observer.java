@@ -27,4 +27,7 @@ public class Observer implements IObserver{
         
     
     }
+    public void makeSound(){
+        
+    }
 }

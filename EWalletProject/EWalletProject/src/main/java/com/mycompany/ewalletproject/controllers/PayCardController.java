@@ -64,6 +64,9 @@ public class PayCardController implements Initializable {
             if(pc.getCardType().equals("credit")){
                 secondText.setText("The balance of the card is: $"+ ((CreditCard)pc).getBalance());
             }
+            else if (pc.getCardType().equals("debit")){
+                firstText.setText("The amount the card is: $"+ ((DebitCard)pc).getBank().getAmount());
+            }   
         } else {
             paymentConfirmation.setText("The payment was not successful. Please try again.");
         }
