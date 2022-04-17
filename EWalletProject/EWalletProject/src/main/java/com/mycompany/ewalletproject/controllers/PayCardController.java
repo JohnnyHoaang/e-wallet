@@ -70,7 +70,6 @@ public class PayCardController implements Initializable {
         } else {
             paymentConfirmation.setText("The payment was not successful. Please try again.");
         }
-        //App.setRoot("LandingPage");
     }
     private void show() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
