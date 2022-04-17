@@ -17,6 +17,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
+import javafx.animation.*;
+import javafx.util.Duration;
 
 public class PayCardController implements Initializable {
 
@@ -30,7 +33,7 @@ public class PayCardController implements Initializable {
     private Text secondText;
     @FXML 
     private Text paymentConfirmation;
-
+    @FXML ImageView eWalletImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         ObservableList<String> options = FXCollections.observableArrayList(Wallet.get().getPaymentCardsList());
@@ -42,6 +45,15 @@ public class PayCardController implements Initializable {
                 error.printStackTrace();
             }
         });
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(eWalletImage);
+        fade.setDuration(Duration.millis(1500));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setAutoReverse(true);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play(); 
     }
 
     @FXML

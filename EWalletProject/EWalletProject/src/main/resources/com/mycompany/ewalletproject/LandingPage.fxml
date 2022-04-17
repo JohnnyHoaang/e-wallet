@@ -88,10 +88,10 @@
                <children>
                   <Pane layoutY="-2.0" prefHeight="34.0" prefWidth="426.0" style="-fx-background-color: orange;">
                      <children>
-                        <Text layoutX="144.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to your e-Wallet" />
+                        <Text layoutX="144.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO YOUR E-WALLET!" />
                      </children>
                   </Pane>
-                  <ImageView fitHeight="206.0" fitWidth="271.0" layoutX="77.0" layoutY="71.0">
+                  <ImageView fx:id="eWalletImage" fitHeight="206.0" fitWidth="271.0" layoutX="77.0" layoutY="71.0">
                      <image>
                         <Image url="@e-wallet.png" />
                      </image>

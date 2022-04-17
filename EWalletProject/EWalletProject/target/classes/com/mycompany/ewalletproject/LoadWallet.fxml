@@ -25,7 +25,7 @@
                               <Text fill="#ccff00" layoutX="40.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-WALLET" />
                            </children>
                         </Pane>
-                        <ImageView fitHeight="109.0" fitWidth="134.0">
+                        <ImageView fx:id="eWalletImage" fitHeight="109.0" fitWidth="134.0">
                            <image>
                               <Image url="@e-wallet.png" />
                            </image>

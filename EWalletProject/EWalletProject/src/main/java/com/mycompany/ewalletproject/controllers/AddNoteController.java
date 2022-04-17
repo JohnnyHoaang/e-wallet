@@ -11,8 +11,14 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.animation.*;
+import javafx.fxml.Initializable;
+import javafx.util.Duration;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AddNoteController {
+public class AddNoteController implements Initializable{
 
 
     @FXML
@@ -35,6 +41,20 @@ public class AddNoteController {
     private RadioButton secReminder;
     @FXML
     private RadioButton daysReminder;
+    
+    @FXML ImageView eWalletImage;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle){
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(eWalletImage);
+        fade.setDuration(Duration.millis(1500));
+        fade.setCycleCount(TranslateTransition.INDEFINITE);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setAutoReverse(true);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();  
+    }
     
     @FXML
     private void addNote() throws IOException{
