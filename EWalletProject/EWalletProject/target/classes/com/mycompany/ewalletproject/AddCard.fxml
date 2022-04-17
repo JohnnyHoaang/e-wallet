@@ -27,7 +27,7 @@
                               <Text fill="#ccff00" layoutX="40.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-WALLET" />
                            </children>
                         </Pane>
-                        <ImageView fitHeight="82.0" fitWidth="95.0">
+                        <ImageView fx:id="eWalletImage" fitHeight="82.0" fitWidth="95.0">
                            <image>
                               <Image url="@e-wallet.png" />
                            </image>
@@ -66,8 +66,8 @@
                               <RadioButton id="paymentButton" fx:id="paymentButton" layoutX="158.0" mnemonicParsing="false" selected="true" text="Payment" toggleGroup="$cards" />
                            </children>
                         </Group>
-                        <Button layoutX="209.0" layoutY="152.0" mnemonicParsing="false" style="-fx-background-color: black;" text="NEXT" textFill="WHITE" onAction="#switchToNextPage"/>
-                        <Button layoutY="152.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="MAIN PAGE" textFill="WHITE" onAction="#switchToLandingPage"/>
+                        <Button layoutX="209.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToNextPage" style="-fx-background-color: black;" text="NEXT" textFill="WHITE" />
+                        <Button layoutY="152.0" mnemonicParsing="false" onAction="#switchToLandingPage" style="-fx-background-color: BLACK;" text="MAIN PAGE" textFill="WHITE" />
                      </children>
                   </Pane>
                </children>
