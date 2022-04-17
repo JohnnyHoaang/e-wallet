@@ -14,9 +14,15 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
     this.amount = 0;
   }
   public Cash(double amount) {
+    if(amount<0){
+      throw new IllegalArgumentException("Amount cannot be negative");
+    }
     this.amount = amount;
   }
   public Cash(Cash cash){
+    if(cash.getAmount()<0){
+      throw new IllegalArgumentException("Amount cannot be negative");
+    }
     this.amount = cash.getAmount();
   }
 
@@ -28,6 +34,9 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
     this.amount = amount;
   }
   public boolean pay(double amount){
+    if(amount<0){
+      throw new IllegalArgumentException("Amount cannot be negative");
+    }
     boolean check = false;
     if(this.amount-amount < 0) {
       check = false;

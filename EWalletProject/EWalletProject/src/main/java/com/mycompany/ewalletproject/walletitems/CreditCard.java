@@ -62,6 +62,9 @@ public class CreditCard extends PaymentCard  implements ISubject, IBalanceObserv
 
   @Override
   public boolean withdraw(int amount){
+    if (amount<0){
+      throw new IllegalArgumentException("Amount cannot be negative");
+    }
     if((this.balance+amount) > limit){
       return false;
     }

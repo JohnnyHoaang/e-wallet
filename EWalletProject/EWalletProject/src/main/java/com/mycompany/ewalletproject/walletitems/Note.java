@@ -1,5 +1,9 @@
 package com.mycompany.ewalletproject.walletitems;
 
+import com.mycompany.ewalletproject.threads.MakeWarningSoundThread;
+
+import javafx.application.Platform;
+
 public class Note implements IWalletItem{
   private Date creationDate;
   private String text;
@@ -49,7 +53,8 @@ public class Note implements IWalletItem{
   public void remind() throws InterruptedException{
     while(true){
     Thread.sleep(this.getReminderFrequency());
-    System.out.println("Reminding!");
+    Thread makeSoundThread = new MakeWarningSoundThread();
+    Platform.runLater(makeSoundThread);
     }
   }
 

@@ -29,6 +29,5 @@ public class LoadWalletThread extends Thread{
     private void setWallet(int id){
         Wallet wallet = Database.get().load(id);
         Wallet.set(wallet);
-        Wallet.get().printAll();
     }
 }

@@ -51,7 +51,7 @@ public class Wallet {
         for (int i=0; i<wallet.size();i++){
             if(wallet.get(i) instanceof PaymentCard){
                 if(((PaymentCard)wallet.get(i)).getCardNumber().equals(cardNumber)){
-                    this.wallet.remove(i);
+                    this.wallet.remove(wallet.get(i));
                 }
             }
             else if(wallet.get(i) instanceof PersonalCard){
@@ -70,11 +70,7 @@ public class Wallet {
             }
         }
     }
-    public void wipeAll(){
-        for (IWalletItem iw: wallet){
-            this.wallet.remove(iw);
-        }
-    }
+
     public ArrayList<String> browseNotes(){
         ArrayList<String> notes = new ArrayList<String>();
         for (IWalletItem w: wallet){
