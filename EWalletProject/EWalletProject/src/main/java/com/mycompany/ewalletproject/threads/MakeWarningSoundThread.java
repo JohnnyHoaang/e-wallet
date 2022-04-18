@@ -21,7 +21,7 @@ public class MakeWarningSoundThread extends Thread{
             System.out.println("Current dir using System:" + currentDir);
             
             
-            File file = new File("./src/main/java/com/mycompany/ewalletproject/sound/phone.wav");
+            File file = new File("./src/main/java/com/mycompany/ewalletproject/sound/phonebrrr.wav");
             AudioInputStream ais = AudioSystem.getAudioInputStream(file);
             AudioFormat format = ais.getFormat();
             DataLine.Info info = new DataLine.Info(Clip.class, format);
