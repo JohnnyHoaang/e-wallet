@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject.observables;
 import com.mycompany.ewalletproject.walletitems.Cash;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 
+
 public class Observer implements IObserver{
     private ISubject obs;
 
@@ -24,7 +25,5 @@ public class Observer implements IObserver{
                 System.out.println("Amount is less than $30"); 
             }
         }
-        
-    
     }
 }

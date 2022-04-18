@@ -48,8 +48,8 @@ public class Note implements IWalletItem{
 
   public void remind() throws InterruptedException{
     while(true){
-    Thread.sleep(this.getReminderFrequency());
-    System.out.println("Reminding!");
+      Thread.sleep(this.getReminderFrequency());
+      System.out.println("Reminding!");
     }
   }
 
