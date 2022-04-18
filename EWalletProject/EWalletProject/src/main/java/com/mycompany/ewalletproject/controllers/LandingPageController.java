@@ -14,10 +14,8 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
-import javafx.util.Duration;
 
 
 /**

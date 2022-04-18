@@ -15,9 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
-import javafx.util.Duration;
-
 
 public class OpenWalletController implements Initializable{
     @FXML private GridPane walletPane;

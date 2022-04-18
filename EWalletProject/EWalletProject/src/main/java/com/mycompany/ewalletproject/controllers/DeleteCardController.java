@@ -14,9 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
 import javafx.application.Platform;
-import javafx.util.Duration;
 
 public class DeleteCardController implements Initializable {
 

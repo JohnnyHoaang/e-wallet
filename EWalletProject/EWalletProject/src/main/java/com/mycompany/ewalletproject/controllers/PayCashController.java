@@ -15,9 +15,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
 import javafx.application.Platform;
-import javafx.util.Duration;
+
 
 public class PayCashController implements Initializable {
 
@@ -26,6 +25,8 @@ public class PayCashController implements Initializable {
     private TextField amount;
     @FXML
     private Text cashAmount;
+    @FXML
+    private Text firstText;
     @FXML ImageView eWalletImage;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -47,10 +48,10 @@ public class PayCashController implements Initializable {
         boolean payCheck = cash.pay(Double.parseDouble(this.amount.getText()));
         cashAmount.setText("Cash Amount: $" + cash.getAmount());
         if(payCheck){
-            // your payment was successful
+            firstText.setText("Your payment was successful!");
         }
         else{
-            // you do not have enough cash...
+            firstText.setText("Your payment was not successful...");
         }
     }
 }

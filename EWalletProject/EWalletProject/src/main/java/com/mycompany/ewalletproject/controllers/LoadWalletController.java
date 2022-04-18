@@ -15,8 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
-import javafx.util.Duration;
 
 
 public class LoadWalletController implements Initializable {

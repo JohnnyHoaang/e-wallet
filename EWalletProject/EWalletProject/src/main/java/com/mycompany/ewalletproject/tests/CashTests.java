@@ -30,6 +30,15 @@ public class CashTests {
         }
     }
     @Test
+    public void payHighAmountFalseTest(){
+        Cash cash = new Cash(100);
+        try {
+            cash.pay(150);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
     public void firstCashConstructorTest(){
         Cash c = new Cash();
         assertEquals(0, c.getAmount(),0);

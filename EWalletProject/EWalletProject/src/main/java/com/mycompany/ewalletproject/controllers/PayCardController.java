@@ -19,9 +19,8 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
-import javafx.animation.*;
 import javafx.application.Platform;
-import javafx.util.Duration;
+
 
 public class PayCardController implements Initializable {
 
