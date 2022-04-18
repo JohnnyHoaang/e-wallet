@@ -50,8 +50,6 @@ public class Observer implements IObserver{
                 System.out.println("Amount is less than $30"); 
             }
         }
-        
-    
     }
     public void makeSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         Thread soundThread = new MakeWarningSoundThread();

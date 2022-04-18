@@ -1,4 +1,3 @@
-C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\tests\NoteTests.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\LandingPageController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\OpenWalletController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\Date.java
@@ -8,9 +7,7 @@ C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\ja
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\threads\LoadWalletThread.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PayController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\threads\RemindThread.java
-C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\tests\CreditCardTests.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\PaymentCard.java
-C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\tests\DatabaseTests.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\Cash.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\AddCardController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\Bank.java
@@ -21,7 +18,6 @@ C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\ja
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\CreditCard.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\SeeNotesController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\SystemInfo.java
-C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\tests\WalletTests.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\module-info.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PayCardController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\observables\IBalanceObservable.java
@@ -40,6 +36,5 @@ C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\ja
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\CreditCardController.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\storage\Wallet.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\controllers\PayCashController.java
-C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\tests\DebitCardTests.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\threads\OpenWalletThread.java
 C:\JOSE\Dawson\Semester 6\Java\ewallet\EWalletProject\EWalletProject\src\main\java\com\mycompany\ewalletproject\walletitems\PersonalCard.java

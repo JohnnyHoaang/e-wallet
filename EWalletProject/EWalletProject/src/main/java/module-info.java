@@ -10,8 +10,6 @@ module com.mycompany.ewalletproject {
     exports com.mycompany.ewalletproject;
     opens com.mycompany.ewalletproject.controllers to javafx.fxml;
     exports com.mycompany.ewalletproject.controllers;
-    opens com.mycompany.ewalletproject.tests to javafx.fxml;
-    exports com.mycompany.ewalletproject.tests;
     opens com.mycompany.ewalletproject.threads to javafx.fxml;
     exports com.mycompany.ewalletproject.threads;
     opens com.mycompany.ewalletproject.walletitems to javafx.fxml;
