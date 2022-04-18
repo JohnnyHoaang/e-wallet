@@ -12,8 +12,16 @@ public class MakeWarningSoundThread extends Thread{
     // makes a sound when called
     @Override
     public void run(){
+        
         try {
-            File file = new File("./EWalletProject/src/main/java/com/mycompany/ewalletproject/sound/phone.wav");
+            String currentPath = new java.io.File(".").getCanonicalPath();
+            System.out.println("Current dir:" + currentPath);
+
+            String currentDir = System.getProperty("user.dir");
+            System.out.println("Current dir using System:" + currentDir);
+            
+            
+            File file = new File("./src/main/java/com/mycompany/ewalletproject/sound/phone.wav");
             AudioInputStream ais = AudioSystem.getAudioInputStream(file);
             AudioFormat format = ais.getFormat();
             DataLine.Info info = new DataLine.Info(Clip.class, format);

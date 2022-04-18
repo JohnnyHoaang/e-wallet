@@ -84,7 +84,7 @@ public class CreditCard extends PaymentCard  implements ISubject, IBalanceObserv
               " \nSecurity code: " + this.secCode + 
               " \nLimit: $" + this.limit+
               "\nBalance: $" + this.balance;
-      return super.toString() + repr;
+        return "Credit Card: \n" + super.toString() + repr;
   }
 
 
