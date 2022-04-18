@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
 import com.mycompany.ewalletproject.walletitems.PaymentCard;
@@ -19,6 +20,7 @@ import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.animation.*;
+import javafx.application.Platform;
 import javafx.util.Duration;
 
 public class PayCardController implements Initializable {
@@ -45,15 +47,8 @@ public class PayCardController implements Initializable {
                 error.printStackTrace();
             }
         });
-        FadeTransition fade = new FadeTransition();
-        fade.setNode(eWalletImage);
-        fade.setDuration(Duration.millis(1500));
-        fade.setCycleCount(TranslateTransition.INDEFINITE);
-        fade.setInterpolator(Interpolator.LINEAR);
-        fade.setAutoReverse(true);
-        fade.setFromValue(0);
-        fade.setToValue(1);
-        fade.play(); 
+        Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
+        Platform.runLater(imageThread);
     }
 
     @FXML

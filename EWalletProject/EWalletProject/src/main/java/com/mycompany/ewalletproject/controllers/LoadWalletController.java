@@ -2,6 +2,7 @@ package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Database;
+import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.threads.LoadWalletThread;
 
 import java.io.IOException;
@@ -26,15 +27,8 @@ public class LoadWalletController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle){
         LoadWalletThread loadWallet = new LoadWalletThread(walletPane, Database.get());
         Platform.runLater(loadWallet);
-        FadeTransition fade = new FadeTransition();
-        fade.setNode(eWalletImage);
-        fade.setDuration(Duration.millis(1500));
-        fade.setCycleCount(TranslateTransition.INDEFINITE);
-        fade.setInterpolator(Interpolator.LINEAR);
-        fade.setAutoReverse(true);
-        fade.setFromValue(0);
-        fade.setToValue(1);
-        fade.play();  
+        Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
+        Platform.runLater(imageThread);
     }
     
     @FXML

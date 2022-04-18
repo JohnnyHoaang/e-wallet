@@ -2,6 +2,7 @@ package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.animation.*;
+import javafx.application.Platform;
 import javafx.util.Duration;
 
 public class DeleteCardController implements Initializable {
@@ -26,15 +28,8 @@ public class DeleteCardController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle){
         ObservableList<String> options = FXCollections.observableArrayList(Wallet.get().getAllCardsList());
         deleteCardBox.setItems(options);
-        FadeTransition fade = new FadeTransition();
-        fade.setNode(eWalletImage);
-        fade.setDuration(Duration.millis(1500));
-        fade.setCycleCount(TranslateTransition.INDEFINITE);
-        fade.setInterpolator(Interpolator.LINEAR);
-        fade.setAutoReverse(true);
-        fade.setFromValue(0);
-        fade.setToValue(1);
-        fade.play(); 
+        Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
+        Platform.runLater(imageThread);
     }
 
     @FXML
