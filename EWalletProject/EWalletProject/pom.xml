@@ -24,7 +24,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-        </dependency>
+        </dependency>  
+    
+      <dependency>
+        <groupId>org.lecturestudio.avdev</groupId>
+        <artifactId>avdev</artifactId>
+        <version>0.1.0</version>
+      </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -21,8 +21,4 @@ public class NoteTests {
         assertEquals(second.getID(),1);
         assertEquals(third.getID(),2);
     }
-    @Test
-    public void otherTest(){
-
-    }
 }

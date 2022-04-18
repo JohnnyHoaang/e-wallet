@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
 import com.mycompany.ewalletproject.walletitems.PaymentCard;
@@ -17,6 +18,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
+import javafx.application.Platform;
+
 
 public class PayCardController implements Initializable {
 
@@ -30,7 +34,7 @@ public class PayCardController implements Initializable {
     private Text secondText;
     @FXML 
     private Text paymentConfirmation;
-
+    @FXML ImageView eWalletImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         ObservableList<String> options = FXCollections.observableArrayList(Wallet.get().getPaymentCardsList());
@@ -42,6 +46,8 @@ public class PayCardController implements Initializable {
                 error.printStackTrace();
             }
         });
+        Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
+        Platform.runLater(imageThread);
     }
 
     @FXML
@@ -64,10 +70,12 @@ public class PayCardController implements Initializable {
             if(pc.getCardType().equals("credit")){
                 secondText.setText("The balance of the card is: $"+ ((CreditCard)pc).getBalance());
             }
+            else if (pc.getCardType().equals("debit")){
+                firstText.setText("The amount the card is: $"+ ((DebitCard)pc).getBank().getAmount());
+            }   
         } else {
             paymentConfirmation.setText("The payment was not successful. Please try again.");
         }
-        //App.setRoot("LandingPage");
     }
     private void show() throws IOException{
         PaymentCard pc = Wallet.get().loadPaymentCard(payBox.getValue());
