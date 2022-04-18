@@ -13,7 +13,8 @@ public class LoadWalletThread extends Thread{
     public LoadWalletThread(GridPane gridPane, Database database){
         this.gridPane = gridPane;
         this.database = database;
-    }   
+    }
+    // creates a button for every wallet in database   
     @Override
     public void run(){
         int count = 0;

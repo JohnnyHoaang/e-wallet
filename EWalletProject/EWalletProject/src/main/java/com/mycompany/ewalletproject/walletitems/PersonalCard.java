@@ -5,12 +5,12 @@ public class PersonalCard implements IWalletItem{
     private String number;
     private Date expiryDate = null;
 
-
+    // Default constructor
     public PersonalCard(String name, String number) {
         this.name = name;
         this.number = number;
     }
-
+    // Constructor with expiry date
     public PersonalCard(String name, String number, Date expiryDate) {
         this.name = name;
         this.number = number;

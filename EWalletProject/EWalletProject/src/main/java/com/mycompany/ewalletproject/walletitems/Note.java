@@ -7,11 +7,11 @@ import javafx.application.Platform;
 public class Note implements IWalletItem{
   private Date creationDate;
   private String text;
-  private boolean reminder = false;
   private long reminderFrequency;
   private static int sequenceNum = 0;
   private int id;
   
+  // Default constructor
   public Note(Date creationDate, String text) {
     this.creationDate = creationDate;
     this.text = text;
@@ -34,22 +34,13 @@ public class Note implements IWalletItem{
     this.text = text;
   }
 
-
-  public boolean isReminder() {
-    return reminder;
-  }
-  public void setReminder(boolean reminder){
-    this.reminder = reminder;
-  }
-
-
   public long getReminderFrequency() {
     return reminderFrequency;
   }
   public void setReminderFrequency(long reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
   }
-
+  // Reminds user that there is a note
   public void remind() throws InterruptedException{
     while(true){
     Thread.sleep(this.getReminderFrequency());

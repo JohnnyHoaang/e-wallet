@@ -9,6 +9,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 
 public class MakeWarningSoundThread extends Thread{
+    // makes a sound when called
     @Override
     public void run(){
         try {

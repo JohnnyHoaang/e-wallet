@@ -18,6 +18,7 @@ public class SeeNotesThread extends Thread{
         this.gridPane = gridPane;
         this.notes = notes;
     }
+    // Creates rectangle for each note in wallet
     @Override
     public void run(){
         int count = 0;

@@ -8,6 +8,7 @@ public class PaymentCard implements IWalletItem{
     private String cardName;
     private String cardNumber;
     
+    // Default Constructor
     public PaymentCard(String cardName, String cardNumber){
         this.cardName = cardName;
         this.cardNumber = cardNumber;
@@ -24,6 +25,7 @@ public class PaymentCard implements IWalletItem{
     public String getCardNumber(){
         return this.cardNumber;
     }
+    // Override methods
     public boolean withdraw(int amount){
         return false;
     }

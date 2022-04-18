@@ -19,6 +19,7 @@ public class OpenWalletThread extends Thread{
         this.wallet = wallet;
         this.gridPane = gridPane;
     }
+    // makes a rectangle pane for every item of the wallet
     @Override
     public void run(){
         int count = 0;

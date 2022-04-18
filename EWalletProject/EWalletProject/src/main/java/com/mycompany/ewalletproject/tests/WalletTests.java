@@ -53,10 +53,7 @@ public class WalletTests {
         w.add(n2);
         w.add(n3);
         ArrayList<String> notesContent = w.browseNotes();
-        assertEquals("Hello 1", n.getText());
-        assertEquals("Hello 2", n2.getText());
-        assertEquals("Hello 3", n3.getText());
-
+        assertEquals(3, notesContent.size());
     }
     @Test
     public void getPaymentCardsTest(){

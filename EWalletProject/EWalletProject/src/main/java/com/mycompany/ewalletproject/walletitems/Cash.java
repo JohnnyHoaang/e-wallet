@@ -10,15 +10,18 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
   private double amount;
   private ArrayList<IObserver> observers = new ArrayList<IObserver>();
 
+  //Default Constructor
   public Cash(){
     this.amount = 0;
   }
+  // Constructor with amount
   public Cash(double amount) {
     if(amount<0){
       throw new IllegalArgumentException("Amount cannot be negative");
     }
     this.amount = amount;
   }
+  // Copy Constructor
   public Cash(Cash cash){
     if(cash.getAmount()<0){
       throw new IllegalArgumentException("Amount cannot be negative");
@@ -33,6 +36,7 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
   public void setAmount(double amount) {
     this.amount = amount;
   }
+  // Checks if amount is valid and withdraws amount from total amount
   public boolean pay(double amount){
     if(amount<0 || this.amount-amount<0){
       throw new IllegalArgumentException("Amount cannot be negative");
@@ -51,20 +55,23 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
   public String toString(){
     return "$" + this.amount;
   }
+  // Deletes all Observers
   public void deleteObservers(){
     observers.clear();
   }
-
+  // Adds observer to observer list 
   @Override
   public void attach(IObserver b) {
     observers.add(b);
     
   }
+  // Deletes observer from observer list 
   @Override
   public void detach(IObserver a){
     int index = observers.indexOf(a);
     this.observers.remove(index);
   }
+  // Calls update method from observer
   @Override
   public void notifyObserver(){
     for(IObserver ob : observers){

@@ -59,7 +59,7 @@ public class CreditCard extends PaymentCard  implements ISubject, IBalanceObserv
   public void deleteObservers(){
     observers.clear();
   }
-
+  // Checks if amount is valid and withdraws amount from total amount
   @Override
   public boolean withdraw(int amount){
     if (amount<0){
@@ -71,7 +71,6 @@ public class CreditCard extends PaymentCard  implements ISubject, IBalanceObserv
     else {
       this.balance+= amount;
     }
-
     this.notifyObserver();
     return true;
   }

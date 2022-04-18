@@ -2,12 +2,12 @@ package com.mycompany.ewalletproject.walletitems;
 
 public class DebitCard extends PaymentCard{
   private Bank bank;  
-
+  // Default constructor
   public DebitCard(String cardName, String cardNumber, Bank bank){
     super(cardName, cardNumber);
     this.setBank(bank);
   }
-
+  // checks if there is enough amount to withdraw
   public boolean checkFundsAvailability(int amount){
     boolean check = false;
     if(this.bank.getAmount() >= amount){
@@ -15,6 +15,7 @@ public class DebitCard extends PaymentCard{
     }
     return check;
   }
+  // Checks if amount is valid and withdraws amount from total amount
   @Override
   public boolean withdraw(int amount){
     boolean checkFunds = this.checkFundsAvailability(amount);

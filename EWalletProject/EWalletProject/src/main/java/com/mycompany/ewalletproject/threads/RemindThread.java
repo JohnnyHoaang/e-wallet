@@ -7,6 +7,7 @@ public class RemindThread extends Thread{
   public RemindThread(Note note){
     this.note = note;
   }
+  // Reminds user 
   @Override
   public void run(){
     try {

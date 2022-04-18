@@ -11,6 +11,7 @@ public class ImageFadeAnimationThread extends Thread{
     public ImageFadeAnimationThread(ImageView iv){
         this.iv = iv;
     }
+    // Creates a fade animation for an image
     @Override
     public void run(){
         FadeTransition fade = new FadeTransition();
