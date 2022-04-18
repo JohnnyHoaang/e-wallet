@@ -50,7 +50,7 @@ public class PersonalCard implements IWalletItem{
                 "\nNumber: "+this.number+
                 "\nDate: "+this.expiryDate;
         }
-        return result;
+        return "Personal Card: \n" + result;
     }
     
 

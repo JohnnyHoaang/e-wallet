@@ -66,6 +66,6 @@ public class Note implements IWalletItem{
     String information = "Text: " + this.text 
                         + "\nCreation date: " + this.creationDate 
                         + "\nID: " + this.id ;
-    return information;
+    return "Note: \n" + information;
   }
 }

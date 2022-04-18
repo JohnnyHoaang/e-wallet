@@ -34,7 +34,7 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
     this.amount = amount;
   }
   public boolean pay(double amount){
-    if(amount<0 || this.amount-amount<0){
+    if(amount<0){
       throw new IllegalArgumentException("Amount cannot be negative");
     }
     boolean check = false;
@@ -49,7 +49,7 @@ public class Cash implements IWalletItem, ISubject, IBalanceObservable{
     return check;
   }
   public String toString(){
-    return "$" + this.amount;
+    return "Cash: \n $" + this.amount;
   }
   public void deleteObservers(){
     observers.clear();
