@@ -91,12 +91,12 @@
                         </Pane>
                         <Pane layoutX="10.0" layoutY="143.0" prefHeight="28.0" prefWidth="300.0">
                            <children>
-                              <Text layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Limit:">
+                              <Text layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Limit (min 500 - 5000 max):">
                                  <font>
                                     <Font name="Elephant" size="12.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="creditLimit" layoutX="154.0" layoutY="1.0" prefHeight="25.0" prefWidth="199.0" />
+                              <TextField fx:id="creditLimit" layoutX="245.0" layoutY="1.0" prefHeight="25.0" prefWidth="108.0" />
                            </children>
                         </Pane>
                         <Pane prefHeight="49.0" prefWidth="353.0">

@@ -9,7 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
+import javafx.scene.text.*;
 
 public class OpenWalletThread extends Thread{
     private Wallet wallet;
@@ -26,8 +26,9 @@ public class OpenWalletThread extends Thread{
         for (IWalletItem item : this.wallet.getWallet()){
             StackPane stack = new StackPane();
             Text t = new Text(item.toString());
-            t.setFill(Color.BLUE);
-            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+5,t.getLayoutBounds().getHeight()+5);
+            t.setFont(Font.font("Elephant", 12));
+            t.setFill(Color.BLACK);
+            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+10,t.getLayoutBounds().getHeight()+10);
             r.setFill(Color.ORANGE);
             r.setStroke(Color.BLACK);
             stack.getChildren().addAll(r,t);
@@ -35,6 +36,7 @@ public class OpenWalletThread extends Thread{
 
             stack.setAlignment(Pos.TOP_LEFT);
             stack.setPadding(new Insets(10));
+            gridPane.setAlignment(Pos.TOP_LEFT);
             count++;
         }
     }

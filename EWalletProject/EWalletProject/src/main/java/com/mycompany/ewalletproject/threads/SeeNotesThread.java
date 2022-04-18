@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class SeeNotesThread extends Thread{
@@ -24,12 +25,13 @@ public class SeeNotesThread extends Thread{
         int count = 0;
         for (String note: this.notes){
             Text t = new Text(note);
-            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+5,t.getLayoutBounds().getHeight()+5);
+            t.setFont(Font.font("Elephant", 12));
+            Rectangle r = new Rectangle(t.getLayoutBounds().getWidth()+10,t.getLayoutBounds().getHeight()+10);
             r.setFill(Color.ORANGE);
             r.setStroke(Color.BLACK);
             StackPane stack = new StackPane();
             stack.getChildren().addAll(r,t);
-            stack.setAlignment(Pos.TOP_LEFT);
+            stack.setAlignment(Pos.CENTER);
             stack.setPadding(new Insets(10)); 
             this.gridPane.add(stack, 0, count); //row column
             count++;
