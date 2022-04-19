@@ -25,7 +25,7 @@ public class Observer implements IObserver{
        this.obs.attach(this);
     }
 
-    public void update(IBalanceObservable bo){
+    public void update(ISubject bo){
         if(bo instanceof CreditCard){
             CreditCard cc = (CreditCard)bo;
             if(cc.getBalance() > (cc.getLimit()*0.5)){
