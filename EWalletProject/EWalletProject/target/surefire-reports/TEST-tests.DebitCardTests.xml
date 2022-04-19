@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="tests.CashTests" time="0.024" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="tests.DebitCardTests" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
@@ -14,7 +14,7 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="tests.CashTests"/>
+    <property name="test" value="tests.DebitCardTests"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\2036759\Desktop\a\ewallet\EWalletProject\EWalletProject"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
@@ -45,7 +45,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=tests.CashTests -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=tests.DebitCardTests -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17.0.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -61,11 +61,8 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="tests.CashTests" name="payTestTrue" time="0.012"/>
-  <testcase classname="tests.CashTests" name="payNegativeAmountTest" time="0.011"/>
-  <testcase classname="tests.CashTests" name="secondCashConstriuctorTest" time="0.001"/>
-  <testcase classname="tests.CashTests" name="firstCashConstructorTest" time="0"/>
-  <testcase classname="tests.CashTests" name="copyConstructorTest" time="0"/>
-  <testcase classname="tests.CashTests" name="payHighAmountFalseTest" time="0"/>
-  <testcase classname="tests.CashTests" name="payTestFalse" time="0"/>
+  <testcase classname="tests.DebitCardTests" name="checkFundsFalseTest" time="0.004"/>
+  <testcase classname="tests.DebitCardTests" name="withdrawAmountTrueTest" time="0"/>
+  <testcase classname="tests.DebitCardTests" name="checkFundsTrueTest" time="0"/>
+  <testcase classname="tests.DebitCardTests" name="withdrawAmountFalseTest" time="0"/>
 </testsuite>

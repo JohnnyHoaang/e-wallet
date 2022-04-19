@@ -23,6 +23,8 @@ public class OpenWalletThread extends Thread{
     @Override
     public void run(){
         int count = 0;
+        int countColumn = 0;
+        int column = 0;
         for (IWalletItem item : this.wallet.getWallet()){
             StackPane stack = new StackPane();
             Text t = new Text(item.toString());
@@ -32,12 +34,18 @@ public class OpenWalletThread extends Thread{
             r.setFill(Color.ORANGE);
             r.setStroke(Color.BLACK);
             stack.getChildren().addAll(r,t);
-            gridPane.add(stack, 0, count);
-
+            if (countColumn == 5){
+                count = 0;
+                countColumn = 0;
+                column++;
+            }
+            //gridPane.add(stack, column, count);
+            gridPane.add(stack, column, count);
             stack.setAlignment(Pos.TOP_LEFT);
             stack.setPadding(new Insets(10));
             gridPane.setAlignment(Pos.TOP_LEFT);
             count++;
+            countColumn++;
         }
     }
 }

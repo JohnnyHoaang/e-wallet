@@ -37,6 +37,9 @@ public class DebitCardController implements Initializable{
     @FXML
     private void addDebitCard() throws IOException {
         DebitCard debit = new DebitCard(cardName.getText(), cardNumber.getText(), new Bank(Integer.parseInt(cardAmount.getText())));
+        if(Wallet.get().countCards()==10){
+            throw new UnsupportedOperationException("Limit of cards reached");
+        }
         Wallet.get().add(debit);
         App.setRoot("LandingPage");
         

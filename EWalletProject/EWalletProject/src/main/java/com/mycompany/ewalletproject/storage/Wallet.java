@@ -112,6 +112,24 @@ public class Wallet {
         }
         return null;
     }
+    public int countCards(){
+        int count = 0;
+        for(IWalletItem item : this.wallet){
+            if(item instanceof PersonalCard || item instanceof PaymentCard){
+                count++;
+            }
+        }
+        return count;
+    }
+    public int countNotes(){
+        int count = 0;
+        for(IWalletItem item : this.wallet){
+            if(item instanceof Note){
+                count++;
+            }
+        }
+        return count;
+    }
     public void printAll(){
         for (IWalletItem i : wallet){
             System.out.println(i);

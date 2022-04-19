@@ -14,13 +14,6 @@ public class MakeWarningSoundThread extends Thread{
     public void run(){
         
         try {
-            String currentPath = new java.io.File(".").getCanonicalPath();
-            System.out.println("Current dir:" + currentPath);
-
-            String currentDir = System.getProperty("user.dir");
-            System.out.println("Current dir using System:" + currentDir);
-            
-            
             File file = new File("./src/main/java/com/mycompany/ewalletproject/sound/phonebrrr.wav");
             AudioInputStream ais = AudioSystem.getAudioInputStream(file);
             AudioFormat format = ais.getFormat();

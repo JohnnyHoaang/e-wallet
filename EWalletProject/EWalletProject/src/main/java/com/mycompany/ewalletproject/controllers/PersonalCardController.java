@@ -36,14 +36,17 @@ public class PersonalCardController implements Initializable{
     }
     @FXML
     private void addPersonalCard() throws IOException {
+        PersonalCard personal = null;
         if (expiryDate.getText().equals("")){
-            PersonalCard personal = new PersonalCard(cardName.getText(), cardNumber.getText());
-            Wallet.get().add(personal);
+            personal = new PersonalCard(cardName.getText(), cardNumber.getText());   
         }
         else {
-            PersonalCard personal = new PersonalCard(cardName.getText(), cardNumber.getText(), new Date(expiryDate.getText()));
-            Wallet.get().add(personal);
+            personal = new PersonalCard(cardName.getText(), cardNumber.getText(), new Date(expiryDate.getText()));
         }
+        if(Wallet.get().countCards()==10){
+            throw new IllegalArgumentException("Limit of cards reached");
+        }
+        Wallet.get().add(personal);
         App.setRoot("LandingPage");
         
     }

@@ -67,6 +67,9 @@ public class AddNoteController implements Initializable{
                remindThread.start();
             }
        }
+        if (Wallet.get().countNotes()==10){
+            throw new UnsupportedOperationException("Limit Amount of notes reached");
+        }
         Wallet.get().add(note);
         App.setRoot("LandingPage");
     }
