@@ -45,6 +45,9 @@ public class CreditCardController implements Initializable{
         CreditCard credit = new CreditCard(cardName.getText(), cardNumber.getText(), 
                 new Date(expiryDate.getText()), securityCode.getText(), 
                 Double.parseDouble(creditLimit.getText()));
+        if(Wallet.get().countCards()==10){
+            throw new UnsupportedOperationException("Limit of cards reached");
+        }  
         Wallet.get().add(credit);
         App.setRoot("LandingPage");
     }
