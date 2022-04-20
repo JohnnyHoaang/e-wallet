@@ -53,8 +53,6 @@ public class LandingPageController implements Initializable{
     }
     @FXML
     private void switchToSaveWallet() throws IOException {
-        Database.get().save(Wallet.get());
-        Wallet.set(new Wallet());
         App.setRoot("SaveWallet");
     }
     @FXML
