@@ -38,10 +38,9 @@ public class OpenWalletThread extends Thread{
                 count = 0;
                 countColumn = 0;
                 column++;
-                gridPane.add(stack, column, count);
-            }else{
-                gridPane.add(stack, column, count);
             }
+            //gridPane.add(stack, column, count);
+            gridPane.add(stack, column, count);
             stack.setAlignment(Pos.TOP_LEFT);
             stack.setPadding(new Insets(10));
             gridPane.setAlignment(Pos.TOP_LEFT);

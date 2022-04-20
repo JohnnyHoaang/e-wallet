@@ -23,6 +23,8 @@ public class SeeNotesThread extends Thread{
     @Override
     public void run(){
         int count = 0;
+        int countColumn = 0;
+        int column = 0;
         for (String note: this.notes){
             Text t = new Text(note);
             t.setFont(Font.font("Elephant", 12));
@@ -33,8 +35,14 @@ public class SeeNotesThread extends Thread{
             stack.getChildren().addAll(r,t);
             stack.setAlignment(Pos.CENTER);
             stack.setPadding(new Insets(10)); 
-            this.gridPane.add(stack, 0, count); //row column
+            if (countColumn == 5){
+                count = 0;
+                countColumn = 0;
+                column++;
+            }
+            this.gridPane.add(stack, column, count); //row column
             count++;
+            countColumn++;
         }
     }
 }

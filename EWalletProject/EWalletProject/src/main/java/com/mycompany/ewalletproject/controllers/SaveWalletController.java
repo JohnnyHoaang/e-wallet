@@ -1,6 +1,8 @@
 package com.mycompany.ewalletproject.controllers;
 
 import com.mycompany.ewalletproject.App;
+import com.mycompany.ewalletproject.storage.Database;
+import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 
 import java.io.IOException;
@@ -16,6 +18,8 @@ public class SaveWalletController implements Initializable{
     @FXML ImageView eWalletImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+        Database.get().save(Wallet.get());
+        Wallet.set(new Wallet());
         Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
         Platform.runLater(imageThread);
     }
