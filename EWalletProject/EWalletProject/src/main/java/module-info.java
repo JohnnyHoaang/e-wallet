@@ -5,6 +5,7 @@ module com.mycompany.ewalletproject {
     requires junit;
     requires java.desktop;
     requires java.sql;
+
     //requires avdev;
     
     opens com.mycompany.ewalletproject to javafx.fxml;
