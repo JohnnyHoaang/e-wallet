@@ -16,6 +16,8 @@ public class LoadWalletThread extends Thread{
     }
     @Override
     public void run(){
+        Database.get().load();
     }
+
 
 }

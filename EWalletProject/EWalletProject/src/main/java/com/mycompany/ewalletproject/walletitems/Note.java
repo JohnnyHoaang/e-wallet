@@ -53,6 +53,10 @@ public class Note implements IWalletItem{
     return this.id;
   }
 
+  public void setID(int id){
+    this.id = id;
+  }
+
   public String toString(){
     String information = "Text: " + this.text 
                         + "\nCreation date: " + this.creationDate 
