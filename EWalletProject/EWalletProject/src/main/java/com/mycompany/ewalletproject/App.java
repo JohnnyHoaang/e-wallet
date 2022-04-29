@@ -51,7 +51,8 @@ public class App extends Application {
         return DriverManager.getConnection("jdbc:oracle:thin:@198.168.52.211:1521/pdbora19c.dawsoncollege.qc.ca",
                 username, password );
     }
-    public Connection getConnection(){
+    public static Connection getConnection() throws SQLException{
+        App.conn.setAutoCommit(true);
         return App.conn;
     }
     public static void main(String[] args) throws SQLException{

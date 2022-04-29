@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -18,7 +19,11 @@ public class SaveWalletController implements Initializable{
     @FXML ImageView eWalletImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        Database.get().save(Wallet.get());
+        try {
+            Database.get().save(Wallet.get());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Wallet.set(new Wallet());
         Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
         Platform.runLater(imageThread);
