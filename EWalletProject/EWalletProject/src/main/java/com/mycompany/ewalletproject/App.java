@@ -7,7 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.Console;
 import java.io.IOException;
+import java.sql.*;
+import java.util.Scanner;
 
 /**
  * JavaFX App
@@ -15,6 +18,7 @@ import java.io.IOException;
 public class App extends Application {
     private static Stage stage;
     private static Scene scene;
+    private static Connection conn;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -43,9 +47,28 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
-
-    public static void main(String[] args) {
-        launch();
+    private static Connection connectToDB(String username, String password) throws SQLException {
+        return DriverManager.getConnection("jdbc:oracle:thin:@198.168.52.211:1521/pdbora19c.dawsoncollege.qc.ca",
+                username, password );
+    }
+    public Connection getConnection(){
+        return App.conn;
+    }
+    public static void main(String[] args) throws SQLException{
+        Scanner reader = new Scanner(System.in);
+        Console console = System.console();
+        try {
+            String username = console.readLine("Username: ");
+            String password = new String(console.readPassword("Password: "));
+            App.conn = connectToDB(username, password);
+            launch();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally{
+            reader.close();
+            App.conn.close();
+        }
     }
 
 }
