@@ -34,3 +34,9 @@ CREATE TABLE Note(
     text varchar2(100),
     reminder_frequency varchar2(100)
 );
+
+CREATE TABLE Personal_Card(
+    card_name varchar2(100),
+    card_number varchar2(100),
+    expiry_date varchar2(100)
+);
