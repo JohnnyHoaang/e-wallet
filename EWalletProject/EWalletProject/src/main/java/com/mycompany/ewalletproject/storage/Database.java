@@ -79,7 +79,9 @@ public class Database{
         }
     }
     public Wallet load(int id){
-        //fetch data from database
+        // Fetch data from database
+
+        
         Wallet wallet = null;
         return wallet;
     }
