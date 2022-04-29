@@ -24,4 +24,7 @@ public class Bank {
   public int getID() {
     return this.id;
   }
+  public void setID(int id) {
+    this.id = id;
+  }
 }

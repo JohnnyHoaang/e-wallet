@@ -35,6 +35,9 @@ public class Wallet {
     public Cash getCash(){
         return (Cash)wallet.get(0);
     }
+    public void setCash(double amount){
+        ((Cash)wallet.get(0)).setAmount(amount);
+    }
     public ArrayList<IWalletItem> getWallet(){
         return this.wallet;
     }

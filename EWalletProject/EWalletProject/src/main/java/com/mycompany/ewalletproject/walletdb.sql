@@ -17,7 +17,7 @@ CREATE TABLE Debit_Card(
 CREATE TABLE Credit_Card(
     card_name varchar2(100),
     card_number varchar2(100),
-    expiry_date VARCHAR2(100),
+    expiry_date varchar2(100),
     sec_code varchar2(100),
     limit number(5),
     balance number(7,2)
@@ -30,7 +30,7 @@ CREATE TABLE Cash(
 
 CREATE TABLE Note(
     note_id number(3) primary key,
-    creation_date VARCHAR2(100),
+    creation_date varchar2(100),
     text varchar2(100),
     reminder_frequency varchar2(100)
 );

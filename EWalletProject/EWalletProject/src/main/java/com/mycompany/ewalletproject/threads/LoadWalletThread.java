@@ -1,5 +1,7 @@
 package com.mycompany.ewalletproject.threads;
 
+import java.sql.SQLException;
+
 import com.mycompany.ewalletproject.storage.Database;
 import com.mycompany.ewalletproject.storage.Wallet;
 
@@ -16,7 +18,12 @@ public class LoadWalletThread extends Thread{
     }
     @Override
     public void run(){
-        Database.get().load();
+        try {
+            Database.get().load();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 
