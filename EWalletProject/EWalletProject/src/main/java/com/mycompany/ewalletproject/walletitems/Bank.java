@@ -2,6 +2,8 @@ package com.mycompany.ewalletproject.walletitems;
 
 public class Bank {
   private int amount;
+  private int id;
+  
   //Default Constructor
   public Bank(int amount) {
     this.amount = amount;
@@ -16,5 +18,8 @@ public class Bank {
   public void setAmount(int amount) {
     this.amount = amount;
   }
-
+  
+  public int getId() {
+    return this.id;
+  }
 }
