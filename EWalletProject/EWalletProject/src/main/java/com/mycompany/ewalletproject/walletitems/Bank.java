@@ -2,11 +2,13 @@ package com.mycompany.ewalletproject.walletitems;
 
 public class Bank {
   private int amount;
+  private static int sequenceNum = 0;
   private int id;
   
   //Default Constructor
   public Bank(int amount) {
     this.amount = amount;
+    this.id = sequenceNum++;
   }
   //Copy Constructor
   public Bank(Bank b) {
@@ -19,7 +21,7 @@ public class Bank {
     this.amount = amount;
   }
   
-  public int getId() {
+  public int getID() {
     return this.id;
   }
 }
