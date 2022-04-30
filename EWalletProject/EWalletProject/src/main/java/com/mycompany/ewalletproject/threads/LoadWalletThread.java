@@ -19,7 +19,7 @@ public class LoadWalletThread extends Thread{
     @Override
     public void run(){
         try {
-            Database.get().load();
+            Wallet.set(Database.get().load());
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

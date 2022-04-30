@@ -1,6 +1,11 @@
 Important
 
-Observable for cash and debit 
+DELETING ALL DATA WHEN SAVING WALLET
 
-override wallet when saving again
-The wallet can have a maximum of 10 cards and 10 notes at any single point in time. 
+THREADING // REFACTORING
+
+CHANGING VARCHAR2 TO DATE
+
+2 STRATEGIES (PAY(SPORTS MODE) / CALCULATOR)
+
+FIXING OBSERVABLE PATTERN

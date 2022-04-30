@@ -83,10 +83,8 @@ public class Database{
     }
     public Wallet load() throws SQLException{
         //fetch data from database
-        Wallet wallet = null;
-        
-        //Loading Cash
-        String cashSql = "SELECT * FROM CASH";
+        Wallet wallet = new Wallet();
+            String cashSql = "SELECT * FROM CASH";
         PreparedStatement prepCash = App.getConnection().prepareStatement(cashSql);
         ResultSet rsCash = prepCash.executeQuery();
 
@@ -119,14 +117,14 @@ public class Database{
         }
 
         //Loading DebitCard
-        String debitSql = "SELECT * FROM Debit_Card";
+        String debitSql = "SELECT * FROM Debit_Card JOIN Bank USING(bank_id)";
         PreparedStatement prepDebit = App.getConnection().prepareStatement(debitSql);
-        ResultSet rsDebit = prepCash.executeQuery();
+        ResultSet rsDebit = prepDebit.executeQuery();
 
         while(rsDebit.next()){
-            Bank bank =  new Bank(rsDebit.getInt(2));
-            bank.setID(rsDebit.getInt(1));
-            DebitCard debit = new DebitCard(rsDebit.getString(3),rsDebit.getString(4), bank);
+            Bank bank =  new Bank(rsDebit.getInt(4));
+            bank.setID(Integer.parseInt(rsDebit.getString(1)));
+            DebitCard debit = new DebitCard(rsDebit.getString(2),rsDebit.getString(3), bank);
 
             wallet.add(debit);
         }
@@ -140,6 +138,8 @@ public class Database{
             PersonalCard personal = new PersonalCard(rsPersonal.getString(1), rsPersonal.getString(2), new Date(rsPersonal.getString(3)));
             wallet.add(personal);
         }
+    
+        //Loading Cash
         
         return wallet;
     }
