@@ -1,5 +1,6 @@
 package com.mycompany.ewalletproject.storage;
 
+import java.sql.CallableStatement;
 import java.sql.SQLException;
 
 import com.mycompany.ewalletproject.threads.LoadWalletThread;
@@ -19,6 +20,8 @@ public class Database{
         return this.db;
     }
     public void save(Wallet wallet) throws SQLException{
+        Thread delTables = new DeleteTablesThread();
+        Platform.runLater(delTables);
         Thread walSave = new SavingWalletThread(wallet);
         Platform.runLater(walSave);
     }
