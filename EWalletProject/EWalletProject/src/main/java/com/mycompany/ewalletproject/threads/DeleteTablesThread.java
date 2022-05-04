@@ -13,8 +13,8 @@ public class DeleteTablesThread extends Thread{
       }
   }
   public void deleteTables()throws SQLException{
-    String[] deleteStatements = new String[]{"EXECUTE DELETE_CASH","EXECUTE DELETE_NOTES","EXECUTE DELETE_CREDITCARDS",
-        "EXECUTE DELETE_DEBITCARDS","EXECUTE PERSONAL_CARDS"};
+    String[] deleteStatements = new String[]{"{CALL DELETE_CASH}","{CALL DELETE_NOTES}","{CALL DELETE_CREDITCARDS}",
+        "{CALL DELETE_DEBITCARDS}","{CALL DELETE_PERSONALCARDS}"};
         for (String statement:deleteStatements){
             CallableStatement statementCall = App.getConnection().prepareCall(statement);
             statementCall.execute();

@@ -83,7 +83,6 @@ public class LoadWalletThread extends Thread{
             PersonalCard personal = new PersonalCard(rsPersonal.getString(1), rsPersonal.getString(2), new Date(rsPersonal.getString(3)));
             wallet.add(personal);
         }
-
-        Wallet.set(new Wallet(wallet));
+        Wallet.set(wallet);
     }
 }
