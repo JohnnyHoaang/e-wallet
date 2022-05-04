@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ewalletproject.controllers.LandingPageController">
@@ -88,7 +89,10 @@
                <children>
                   <Pane layoutY="-2.0" prefHeight="34.0" prefWidth="426.0" style="-fx-background-color: orange;">
                      <children>
-                        <Text layoutX="144.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO YOUR E-WALLET!" />
+                        <Text fx:id="welcomeText" layoutX="39.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO YOUR E-WALLET!" textAlignment="CENTER" wrappingWidth="328.7629928588867">
+                           <font>
+                              <Font name="Elephant" size="16.0" />
+                           </font></Text>
                      </children>
                   </Pane>
                   <ImageView fx:id="eWalletImage" fitHeight="206.0" fitWidth="271.0" layoutX="77.0" layoutY="71.0">
