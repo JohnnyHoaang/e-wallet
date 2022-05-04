@@ -24,6 +24,15 @@ public class SavingWalletThread extends Thread{
   public SavingWalletThread(Wallet wallet){
     this.wallet = wallet;  
   }
+  @Override
+  public void run(){
+    try{
+      this.save();
+    }
+    catch(SQLException e){
+      e.printStackTrace();
+    }
+  }
   public void save() throws SQLException{
     // insert data to database
     
@@ -79,16 +88,6 @@ public class SavingWalletThread extends Thread{
             prep.setString(3,((PersonalCard)item).getExpiryDate().toString());
             prep.execute();
         }   
-    }
-  }
-
-  @Override
-  public void run(){
-    try{
-      this.save();
-    }
-    catch(SQLException e){
-      e.printStackTrace();
     }
   }
 }

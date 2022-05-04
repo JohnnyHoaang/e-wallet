@@ -12,7 +12,9 @@ public class MakeWarningSoundThread extends Thread{
     // makes a sound when called
     @Override
     public void run(){
-        
+        this.warn();
+    }
+    public void warn(){
         try {
             File file = new File("./src/main/java/com/mycompany/ewalletproject/sound/phonebrrr.wav");
             AudioInputStream ais = AudioSystem.getAudioInputStream(file);
@@ -26,6 +28,5 @@ public class MakeWarningSoundThread extends Thread{
         catch(Exception e){
             e.printStackTrace();
         }
-        
     }
 }

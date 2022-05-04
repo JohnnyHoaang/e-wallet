@@ -17,6 +17,15 @@ import com.mycompany.ewalletproject.walletitems.PersonalCard;
 
 public class LoadWalletThread extends Thread{
     
+    @Override
+    public void run(){
+        try {
+            this.load();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public void load() throws SQLException{
         //fetch data from database
         Wallet wallet = new Wallet();
@@ -77,16 +86,4 @@ public class LoadWalletThread extends Thread{
 
         Wallet.set(new Wallet(wallet));
     }
-
-
-    @Override
-    public void run(){
-        try {
-            this.load();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 }
