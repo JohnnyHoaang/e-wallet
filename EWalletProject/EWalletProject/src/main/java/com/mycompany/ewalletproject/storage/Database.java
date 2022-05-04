@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.mycompany.ewalletproject.threads.LoadWalletThread;
 import com.mycompany.ewalletproject.threads.SavingWalletThread;
+import com.mycompany.ewalletproject.threads.DeleteTablesThread;
 
 
 

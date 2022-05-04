@@ -1,4 +1,5 @@
 package com.mycompany.ewalletproject.threads;
+import com.mycompany.ewalletproject.App;
 import java.sql.*;
 
 public class DeleteTablesThread extends Thread{
@@ -11,7 +12,7 @@ public class DeleteTablesThread extends Thread{
           e.printStackTrace();
       }
   }
-  public void deleteTables(){
+  public void deleteTables()throws SQLException{
     String[] deleteStatements = new String[]{"EXECUTE DELETE_CASH","EXECUTE DELETE_NOTES","EXECUTE DELETE_CREDITCARDS",
         "EXECUTE DELETE_DEBITCARDS","EXECUTE PERSONAL_CARDS"};
         for (String statement:deleteStatements){
