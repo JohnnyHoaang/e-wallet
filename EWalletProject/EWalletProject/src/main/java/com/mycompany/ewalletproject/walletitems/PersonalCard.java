@@ -3,7 +3,7 @@ package com.mycompany.ewalletproject.walletitems;
 public class PersonalCard implements IWalletItem{
     private String name;
     private String number;
-    private Date expiryDate = null;
+    private CustomDate expiryDate = null;
 
     // Default constructor
     public PersonalCard(String name, String number) {
@@ -11,7 +11,7 @@ public class PersonalCard implements IWalletItem{
         this.number = number;
     }
     // Constructor with expiry date
-    public PersonalCard(String name, String number, Date expiryDate) {
+    public PersonalCard(String name, String number, CustomDate expiryDate) {
         this.name = name;
         this.number = number;
         this.expiryDate = expiryDate;
@@ -32,10 +32,10 @@ public class PersonalCard implements IWalletItem{
         this.number = number;
     }
 
-    public Date getExpiryDate() {
+    public CustomDate getExpiryDate() {
         return expiryDate;
     }
-    public void setExpiryDate(Date expiryDate) {
+    public void setExpiryDate(CustomDate expiryDate) {
         this.expiryDate = expiryDate;
     }
     

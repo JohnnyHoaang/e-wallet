@@ -4,16 +4,17 @@ import java.util.ArrayList;
 
 import com.mycompany.ewalletproject.observables.IObserver;
 import com.mycompany.ewalletproject.observables.ISubject;
+import com.mycompany.ewalletproject.strategy.IPay;
 
-public class CreditCard extends PaymentCard  implements ISubject{
+public class CreditCard extends PaymentCard  implements ISubject, IPay{
   private ArrayList<IObserver> observers = new ArrayList<IObserver>();
 
-  private Date expiryDate;
+  private CustomDate expiryDate;
   private String secCode;
   private double limit;
   private double balance = 0;
 
-  public CreditCard(String cardName, String cardNumber, Date expiryDate, String secCode, double limit){
+  public CreditCard(String cardName, String cardNumber, CustomDate expiryDate, String secCode, double limit){
     super(cardName, cardNumber);
     if (limit<100 || limit>5000){
       throw new IllegalArgumentException("Limit is too high or too low.");
@@ -24,7 +25,7 @@ public class CreditCard extends PaymentCard  implements ISubject{
   }
 
   //Get Methods
-  public Date getExpiryDate() {
+  public CustomDate getExpiryDate() {
     return expiryDate;
   }
   public String getSecCode() {

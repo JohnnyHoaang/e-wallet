@@ -25,17 +25,17 @@
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
         </dependency>  
-    
         <dependency>
-          <groupId>org.lecturestudio.avdev</groupId>
-          <artifactId>avdev</artifactId>
-          <version>0.1.0</version>
-        </dependency>
-        <dependency>
-          <groupId>com.oracle.database.jdbc</groupId>
-          <artifactId>ojdbc11</artifactId>
-          <version>21.5.0.0</version>
-       </dependency>
+            <groupId>ojdbc11</groupId>
+            <artifactId>ojdbc11</artifactId>
+            <version>11</version>
+         </dependency>
+  
+      <dependency>
+        <groupId>org.lecturestudio.avdev</groupId>
+        <artifactId>avdev</artifactId>
+        <version>0.1.0</version>
+      </dependency>
     </dependencies>
     <build>
         <plugins>

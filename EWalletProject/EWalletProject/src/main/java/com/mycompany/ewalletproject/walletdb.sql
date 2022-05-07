@@ -1,6 +1,7 @@
 DROP TABLE Bank CASCADE CONSTRAINTS;
 DROP TABLE Debit_Card CASCADE CONSTRAINTS;
 DROP TABLE Credit_Card CASCADE CONSTRAINTS;
+DROP TABLE Personal_Card CASCADE CONSTRAINTS;
 DROP TABLE Cash CASCADE CONSTRAINTS;
 DROP TABLE Note CASCADE CONSTRAINTS;
 CREATE TABLE Bank(
@@ -17,7 +18,7 @@ CREATE TABLE Debit_Card(
 CREATE TABLE Credit_Card(
     card_name varchar2(100),
     card_number varchar2(100),
-    expiry_date varchar2(100),
+    expiry_date DATE,
     sec_code varchar2(100),
     limit number(5),
     balance number(7,2)
@@ -30,7 +31,7 @@ CREATE TABLE Cash(
 
 CREATE TABLE Note(
     note_id number(3) primary key,
-    creation_date varchar2(100),
+    creation_date DATE,
     text varchar2(100),
     reminder_frequency varchar2(100)
 );
@@ -38,5 +39,5 @@ CREATE TABLE Note(
 CREATE TABLE Personal_Card(
     card_name varchar2(100),
     card_number varchar2(100),
-    expiry_date varchar2(100)
+    expiry_date DATE
 );

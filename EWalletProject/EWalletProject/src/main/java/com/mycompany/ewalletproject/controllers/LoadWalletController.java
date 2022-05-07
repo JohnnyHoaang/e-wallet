@@ -23,7 +23,7 @@ public class LoadWalletController implements Initializable {
     @FXML ImageView eWalletImage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        LoadWalletThread loadWallet = new LoadWalletThread(walletPane, Database.get());
+        LoadWalletThread loadWallet = new LoadWalletThread();
         Platform.runLater(loadWallet);
         Thread imageThread = new ImageFadeAnimationThread(eWalletImage);
         Platform.runLater(imageThread);

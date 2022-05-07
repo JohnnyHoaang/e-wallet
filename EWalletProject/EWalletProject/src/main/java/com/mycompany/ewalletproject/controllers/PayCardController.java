@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.strategy.Context;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
@@ -63,7 +64,9 @@ public class PayCardController implements Initializable {
             Observer cro = new Observer(cc);
         }
 
-        boolean payConfirm = pc.withdraw(Integer.parseInt(amount.getText()));
+        Context.get().setPayment(pc);
+        boolean payConfirm = Context.get().showPayment(Integer.parseInt(amount.getText()));
+
         if(payConfirm){
             paymentConfirmation.setText("The payment was successful!");
 

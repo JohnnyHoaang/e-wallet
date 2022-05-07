@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import com.mycompany.ewalletproject.observables.IObserver;
 import com.mycompany.ewalletproject.observables.ISubject;
+import com.mycompany.ewalletproject.strategy.IPay;
 
-public class Cash implements IWalletItem, ISubject{
+public class Cash implements IWalletItem, ISubject, IPay{
   private double amount;
   private ArrayList<IObserver> observers = new ArrayList<IObserver>();
 
@@ -36,7 +37,7 @@ public class Cash implements IWalletItem, ISubject{
     this.amount = amount;
   }
   // Checks if amount is valid and withdraws amount from total amount
-  public boolean pay(double amount){
+  public boolean withdraw(int amount){
     if(amount<0){
       throw new IllegalArgumentException("Amount cannot be negative");
     }
@@ -51,6 +52,7 @@ public class Cash implements IWalletItem, ISubject{
     notifyObserver();
     return check;
   }
+
   public String toString(){
     return "Cash: \n $" + this.amount;
   }

@@ -56,20 +56,20 @@ public class App extends Application {
         return App.conn;
     }
     public static void main(String[] args) throws SQLException{
-//        Scanner reader = new Scanner(System.in);
-//        Console console = System.console();
-//        try {
-//            String username = console.readLine("Username: ");
-//            String password = new String(console.readPassword("Password: "));
-//            App.conn = connectToDB(username, password);
+        Scanner reader = new Scanner(System.in);
+        Console console = System.console();
+       try {
+         String username = console.readLine("Username: ");
+          String password = new String(console.readPassword("Password: "));
+           App.conn = connectToDB(username, password);
             launch();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        finally{
-//            reader.close();
-//            App.conn.close();
-//        }
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+       finally{
+           reader.close();
+           App.conn.close();
+        }
     }
 
 }

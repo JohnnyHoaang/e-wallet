@@ -3,7 +3,7 @@ package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
-import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.CustomDate;
 import com.mycompany.ewalletproject.walletitems.PersonalCard;
 
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class PersonalCardController implements Initializable{
             personal = new PersonalCard(cardName.getText(), cardNumber.getText());   
         }
         else {
-            personal = new PersonalCard(cardName.getText(), cardNumber.getText(), new Date(expiryDate.getText()));
+            personal = new PersonalCard(cardName.getText(), cardNumber.getText(), new CustomDate(expiryDate.getText()));
         }
         if(Wallet.get().countCards()==10){
             throw new IllegalArgumentException("Limit of cards reached");
