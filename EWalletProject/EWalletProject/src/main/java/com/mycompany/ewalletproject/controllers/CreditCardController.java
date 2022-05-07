@@ -4,7 +4,7 @@ import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
-import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.CustomDate;
 
 import java.io.IOException;
 
@@ -43,7 +43,7 @@ public class CreditCardController implements Initializable{
     @FXML
     private void addCreditCard() throws IOException {
         CreditCard credit = new CreditCard(cardName.getText(), cardNumber.getText(), 
-                new Date(expiryDate.getText()), securityCode.getText(), 
+                new CustomDate(expiryDate.getText()), securityCode.getText(), 
                 Double.parseDouble(creditLimit.getText()));
         if(Wallet.get().countCards()==10){
             throw new UnsupportedOperationException("Limit of cards reached");

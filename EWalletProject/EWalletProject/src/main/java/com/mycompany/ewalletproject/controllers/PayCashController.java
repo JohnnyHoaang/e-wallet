@@ -3,6 +3,7 @@ package com.mycompany.ewalletproject.controllers;
 import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.observables.Observer;
 import com.mycompany.ewalletproject.storage.Wallet;
+import com.mycompany.ewalletproject.strategy.Context;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.walletitems.Cash;
 
@@ -45,7 +46,10 @@ public class PayCashController implements Initializable {
         Cash cash = Wallet.get().getCash();
         cash.deleteObservers();
         Observer cro = new Observer(cash);
-        boolean payCheck = cash.pay(Double.parseDouble(this.amount.getText()));
+
+        Context.get().setPayment(cash);
+        boolean payCheck = Context.get().showPayment(Integer.parseInt(this.amount.getText()));
+
         cashAmount.setText("Cash Amount: $" + cash.getAmount());
         if(payCheck){
             firstText.setText("Your payment was successful!");

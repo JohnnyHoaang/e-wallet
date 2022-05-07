@@ -5,24 +5,24 @@ import com.mycompany.ewalletproject.threads.MakeWarningSoundThread;
 import javafx.application.Platform;
 
 public class Note implements IWalletItem{
-  private Date creationDate;
+  private CustomDate creationDate;
   private String text;
   private long reminderFrequency;
   private static int sequenceNum = 0;
   private int id;
   
   // Default constructor
-  public Note(Date creationDate, String text) {
+  public Note(CustomDate creationDate, String text) {
     this.creationDate = creationDate;
     this.text = text;
     this.id = sequenceNum++;
   }
   
   //Get and Set Methods
-  public Date getCreationDate() {
+  public CustomDate getCreationDate() {
     return creationDate;
   }
-  public void setCreationDate(Date creationDate) {
+  public void setCreationDate(CustomDate creationDate) {
     this.creationDate = creationDate;
   }
 

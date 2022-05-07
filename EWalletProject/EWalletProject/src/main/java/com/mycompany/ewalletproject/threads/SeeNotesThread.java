@@ -22,6 +22,9 @@ public class SeeNotesThread extends Thread{
     // Creates rectangle for each note in wallet
     @Override
     public void run(){
+        this.showNotes();
+    }
+    public void showNotes(){
         int count = 0;
         int countColumn = 0;
         int column = 0;

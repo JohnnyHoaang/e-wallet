@@ -20,4 +20,6 @@ module com.mycompany.ewalletproject {
     exports com.mycompany.ewalletproject.storage;
     opens com.mycompany.ewalletproject.observables to javafx.fxml;
     exports com.mycompany.ewalletproject.observables;
+    opens com.mycompany.ewalletproject.strategy to javafx.fxml;
+    exports com.mycompany.ewalletproject.strategy;
 }
