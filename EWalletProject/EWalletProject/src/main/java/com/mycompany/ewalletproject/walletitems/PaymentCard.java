@@ -1,10 +1,12 @@
 package com.mycompany.ewalletproject.walletitems;
 
+import com.mycompany.ewalletproject.strategy.IPay;
+
 /**
  *
  * @author 2038364
  */
-public class PaymentCard implements IWalletItem{
+public class PaymentCard implements IWalletItem, IPay{
     private String cardName;
     private String cardNumber;
     

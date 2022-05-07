@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import com.mycompany.ewalletproject.observables.IObserver;
 import com.mycompany.ewalletproject.observables.ISubject;
+import com.mycompany.ewalletproject.strategy.IPay;
 
-public class CreditCard extends PaymentCard  implements ISubject{
+public class CreditCard extends PaymentCard  implements ISubject, IPay{
   private ArrayList<IObserver> observers = new ArrayList<IObserver>();
 
   private Date expiryDate;
