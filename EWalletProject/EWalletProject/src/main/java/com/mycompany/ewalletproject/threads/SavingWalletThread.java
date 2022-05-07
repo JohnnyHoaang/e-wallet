@@ -10,7 +10,7 @@ import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.walletitems.Bank;
 import com.mycompany.ewalletproject.walletitems.Cash;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
-import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.CustomDate;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
 import com.mycompany.ewalletproject.walletitems.IWalletItem;
 import com.mycompany.ewalletproject.walletitems.Note;
@@ -49,7 +49,7 @@ public class SavingWalletThread extends Thread{
             String noteSql = "INSERT INTO NOTE VALUES(?,?,?,?)";
             PreparedStatement prep = App.getConnection().prepareStatement(noteSql);
             prep.setInt(1, ((Note)item).getID());
-            prep.setString(2, ((Note)item).getCreationDate().toString());
+            prep.setDate(2, ((Note)item).getCreationDate().formatDateToSQL());
             prep.setString(3, ((Note)item).getText());
             prep.setLong(4, ((Note)item).getReminderFrequency());
             prep.execute();
@@ -60,7 +60,7 @@ public class SavingWalletThread extends Thread{
             PreparedStatement prep = App.getConnection().prepareStatement(creditCardSql);
             prep.setString(1, ((CreditCard)item).getCardName());
             prep.setString(2, ((CreditCard)item).getCardNumber());
-            prep.setString(3, ((CreditCard)item).getExpiryDate().toString());
+            prep.setDate(3, ((CreditCard)item).getExpiryDate().formatDateToSQL());
             prep.setString(4, ((CreditCard)item).getSecCode());
             prep.setDouble(5, ((CreditCard)item).getLimit());
             prep.setDouble(6, ((CreditCard)item).getBalance());
@@ -85,7 +85,7 @@ public class SavingWalletThread extends Thread{
             PreparedStatement prep = App.getConnection().prepareStatement(personalCardSql);
             prep.setString(1,((PersonalCard)item).getName());
             prep.setString(2,((PersonalCard)item).getCardNumber());
-            prep.setString(3,((PersonalCard)item).getExpiryDate().toString());
+            prep.setDate(3,((PersonalCard)item).getExpiryDate().formatDateToSQL());
             prep.execute();
         }   
     }

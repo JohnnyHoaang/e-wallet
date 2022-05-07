@@ -9,7 +9,7 @@ import com.mycompany.ewalletproject.App;
 
 import com.mycompany.ewalletproject.walletitems.Bank;
 import com.mycompany.ewalletproject.walletitems.CreditCard;
-import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.CustomDate;
 import com.mycompany.ewalletproject.walletitems.DebitCard;
 
 import com.mycompany.ewalletproject.walletitems.Note;
@@ -44,7 +44,7 @@ public class LoadWalletThread extends Thread{
         ResultSet rsNote = prepNote.executeQuery();
 
         while(rsNote.next()){
-            Note note = new Note(new Date(rsNote.getString(2)), rsNote.getString(3));
+            Note note = new Note(new CustomDate(rsNote.getString(2)), rsNote.getString(3));
             note.setID(rsNote.getInt(1));
             wallet.add(note);
         }
@@ -55,7 +55,7 @@ public class LoadWalletThread extends Thread{
         ResultSet rsCredit = prepCredit.executeQuery();
 
         while(rsCredit.next()){
-            CreditCard credit = new CreditCard(rsCredit.getString(1), rsCredit.getString(2), new Date(rsCredit.getString(3)),
+            CreditCard credit = new CreditCard(rsCredit.getString(1), rsCredit.getString(2), new CustomDate(rsCredit.getString(3)),
                  rsCredit.getString(4), rsCredit.getDouble(5));
 
             wallet.add(credit);
@@ -80,7 +80,7 @@ public class LoadWalletThread extends Thread{
         ResultSet rsPersonal = prepPersonal.executeQuery();
 
         while(rsPersonal.next()){
-            PersonalCard personal = new PersonalCard(rsPersonal.getString(1), rsPersonal.getString(2), new Date(rsPersonal.getString(3)));
+            PersonalCard personal = new PersonalCard(rsPersonal.getString(1), rsPersonal.getString(2), new CustomDate(rsPersonal.getString(3)));
             wallet.add(personal);
         }
         Wallet.set(wallet);
