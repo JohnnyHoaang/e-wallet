@@ -22,6 +22,9 @@ public class OpenWalletThread extends Thread{
     // makes a rectangle pane for every item of the wallet
     @Override
     public void run(){
+       this.showWallet();
+    }
+    public void showWallet(){
         int count = 0;
         int countColumn = 0;
         int column = 0;

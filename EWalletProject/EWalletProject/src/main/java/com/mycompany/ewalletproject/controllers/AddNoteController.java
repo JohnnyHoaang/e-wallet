@@ -4,7 +4,7 @@ import com.mycompany.ewalletproject.App;
 import com.mycompany.ewalletproject.storage.Wallet;
 import com.mycompany.ewalletproject.threads.ImageFadeAnimationThread;
 import com.mycompany.ewalletproject.threads.RemindThread;
-import com.mycompany.ewalletproject.walletitems.Date;
+import com.mycompany.ewalletproject.walletitems.CustomDate;
 import com.mycompany.ewalletproject.walletitems.Note;
 
 import java.io.IOException;
@@ -51,7 +51,7 @@ public class AddNoteController implements Initializable{
     
     @FXML
     private void addNote() throws IOException{
-        Note note = new Note(new Date(creationDate.getText()), noteText.getText());
+        Note note = new Note(new CustomDate(creationDate.getText()), noteText.getText());
         Thread remindThread = new RemindThread(note);
         if (yesReminder.isSelected()){
            if(secReminder.isSelected()){
