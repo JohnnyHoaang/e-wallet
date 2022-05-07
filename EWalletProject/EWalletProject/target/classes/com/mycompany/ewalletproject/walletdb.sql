@@ -11,13 +11,13 @@ CREATE TABLE Bank(
 
 CREATE TABLE Debit_Card(
     card_name varchar2(100),
-    card_number varchar2(100),
+    card_number varchar2(100) PRIMARY KEY,
     bank_id varchar2(100) references bank(bank_id)
 );
 
 CREATE TABLE Credit_Card(
     card_name varchar2(100),
-    card_number varchar2(100),
+    card_number varchar2(100) PRIMARY KEY,
     expiry_date DATE,
     sec_code varchar2(100),
     limit number(5),
@@ -38,6 +38,6 @@ CREATE TABLE Note(
 
 CREATE TABLE Personal_Card(
     card_name varchar2(100),
-    card_number varchar2(100),
+    card_number varchar2(100) PRIMARY KEY,
     expiry_date DATE
 );
