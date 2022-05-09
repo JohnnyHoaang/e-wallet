@@ -14,15 +14,6 @@ import com.mycompany.ewalletproject.walletitems.Note;
 
 public class DatabaseTests{
     @Test
-    public void checkWalletsTest(){
-        Database db = new Database();
-        Wallet w = new Wallet();
-        Wallet w2 = new Wallet();
-        db.save(w);
-        db.save(w2);
-        assertEquals(2, db.getDB().size());
-    }
-    @Test
     public void loadWalletsTest(){
         Database db = new Database();
         Wallet w = new Wallet();

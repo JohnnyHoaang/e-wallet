@@ -10,34 +10,34 @@ CREATE TABLE Bank(
 );
 
 CREATE TABLE Debit_Card(
-    card_name varchar2(100),
+    card_name varchar2(100) NOT NULL,
     card_number varchar2(100) PRIMARY KEY,
     bank_id varchar2(100) references bank(bank_id)
 );
 
 CREATE TABLE Credit_Card(
-    card_name varchar2(100),
+    card_name varchar2(100) NOT NULL,
     card_number varchar2(100) PRIMARY KEY,
-    expiry_date DATE,
-    sec_code varchar2(100),
-    limit number(5),
-    balance number(7,2)
+    expiry_date DATE NOT NULL,
+    sec_code varchar2(100) NOT NULL,
+    limit number(5) NOT NULL,
+    balance number(7,2) NOT NULL
 );
 
 CREATE TABLE Cash(
-    amount number(7,2)
+    amount number(7,2) NOT NULL
 );
 
 
 CREATE TABLE Note(
     note_id number(3) primary key,
-    creation_date DATE,
-    text varchar2(100),
-    reminder_frequency varchar2(100)
+    creation_date DATE NOT NULL,
+    text varchar2(100) NOT NULL,
+    reminder_frequency varchar2(100) NOT NULL
 );
 
 CREATE TABLE Personal_Card(
-    card_name varchar2(100),
+    card_name varchar2(100) NOT NULL,
     card_number varchar2(100) PRIMARY KEY,
-    expiry_date DATE
+    expiry_date DATE NOT NULL
 );
