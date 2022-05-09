@@ -36,6 +36,6 @@ public class DatabaseTests{
         if(rs.next()){
             text = rs.getString(1);
         }
-        assertEquals(w.get().getIWalletItem(0), text);
+        assertEquals(w.getIWalletItem(0), text);
     }
 }
